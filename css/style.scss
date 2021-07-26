@@ -1,0 +1,314 @@
+$primary: #FF9900;
+$main-font: 'Rubik';
+$title-font: 'Montserrat';
+$orange: #FFCC80;
+
+/* mixins */
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* BUTTONS */
+button {
+    background: none;
+    border: none;
+    padding: unset;
+    display: block;
+}
+.btn{
+    @include flex-center;
+    border-radius: 2.5em;
+    padding: .6em 2em;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: normal;
+    color: #fff;
+    transition: .5s;
+    &-1{
+        background-color: $primary;
+        border: 1px solid $primary;
+        box-shadow: 0px 0px 10px $orange;
+    }
+}
+.btn-icon{
+    @include flex-center;
+    position: relative;
+    &-dark {
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+        background-color: #2F2F2F;
+        svg {
+            width: 2em;
+            height: 2em;
+            fill: none;
+            path {
+                stroke: #fff;
+                stroke-width: 2px;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                transition: 300ms;
+            }
+        }
+        &:hover, &:focus {
+            svg {
+                path {stroke: $primary;}
+            }
+        }
+    }
+    .count {
+        @include flex-center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: .9em;
+        font-weight: 500;
+        border-radius: 50%;
+        color: #000;
+        background-color: #fff;
+    }
+}
+
+
+/* TEXT STYLIZATION */
+h1, h2, h3, h5 {font-family: $title-font;}
+h1 {
+    font-size: 3em;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1em;
+}
+h2 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 900;
+    margin-bottom: 1em;
+}
+h3 {
+    text-align: left;
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 2em;
+}
+h4 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+h5 {
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+.fs {
+    &-09 {font-size: .8em;}
+    &-11 {font-size: 1.1em;}
+    &-12 {font-size: 1.2em;}
+    &-13 {font-size: 1.3em;}
+    &-14 {font-size: 1.4em;}
+    &-15 {font-size: 1.5em;}
+    &-16 {font-size: 1.6em;}
+    &-17 {font-size: 1.7em;}
+    &-18 {font-size: 1.8em;}
+    &-19 {font-size: 1.9em;}
+    &-20 {font-size: 2em;}
+}
+.fw {
+    // &-1 {font-weight: 100;}
+    // &-2 {font-weight: 200;}
+    // &-3 {font-weight: 300;}
+    &-4 {font-weight: 400;}
+    &-5 {font-weight: 500;}
+    // &-6 {font-weight: 600;}
+    &-7 {font-weight: 700;}
+    // &-8 {font-weight: 800;}
+    &-9 {font-weight: 900;}
+}
+.white {color:#fff;}
+.black {color: #000;}
+.primary {color: $primary;}
+
+
+body {
+    font-family: 'Rubik';
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    background: url(../img/bg/blobs.svg) no-repeat right top;
+    background-size: 70% auto;
+}
+@media (max-width: 1659px){
+    body {font-size: 15px;}
+}
+/* @media (max-width: 1199px){
+    body {font-size: 15px;}
+}
+@media (max-width: 991px){
+    body {font-size: 14px;}
+}
+@media (max-width: 575px){
+    body {font-size: 13px;}
+} */
+
+
+header {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            max-width: 14em;
+            img {max-width: 100%;}
+        }
+        nav {
+            ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                li {
+                    a {
+                        font-weight: 500;
+                        font-size: 1.5em;
+                        color: #000;
+                        padding: 0 .5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* sec 1 */
+#main-slider {
+    padding: 2em 0 4em;
+    .img-slider {
+        width: 100%;
+        height: 765px;
+        object-fit: scale-down;
+    }
+}
+.carousel-indicators {
+    bottom: 0px;
+    margin-bottom: 0px;
+    [data-bs-target] {
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: #BDBDBD;
+        opacity: 1;
+    }
+    [data-bs-target]:not(:first-child){margin-left: 1em;}
+    [data-bs-target].active {
+        background-color: $primary;
+    }
+}
+.carousel-control-next, .carousel-control-prev {
+    width: 2em;
+    height: 3em;
+    @include flex-center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-control-prev {left: -2em;}
+.carousel-control-next {right: -2em;}
+
+
+.categorie {
+    border-radius: 1.8em;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        position: relative;
+        z-index: -1;
+    }
+    .text {
+        background-color: #fff;
+        height: 140px;
+        position: relative;
+        z-index: -1;
+        @include flex-center;
+    }
+    a.stretched-link {
+        z-index: 2;
+        display: block;
+        height: 0px;
+        width: 0px;
+        opacity: 0;
+        &:hover ~ .text{
+            h4 {color: $primary;}
+        }
+    }
+}
+
+.product-preview {
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 1.8em;
+    padding: 1em;
+    img {
+        width: 100%;
+        height: 375px;
+        object-fit: contain;
+        margin-bottom: 1em;
+    }
+    input.compare {
+        appearance:none;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        -ms-appearance:none;
+        width: 2.5em;
+        height: 2.5em;
+        padding: 0px;
+        border-radius: 50%;
+        background-color: $orange;
+        background-image: url(../img/icons/bar-chart.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 1.5em 1.5em;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        z-index: 10;
+    }
+    input.compare:checked {background-color: $primary;}
+}
+
+.swiper-4 {
+    overflow: hidden;
+    .swiper-slide {
+        padding: 4px;
+    }
+}
+.swiper-button-next, .swiper-button-prev {
+    width: 2em;
+    height: 3em;
+    opacity: .5;
+    &::after {
+        content: unset;
+    }
+    &:hover, &:focus, &:active {
+        opacity: 1;
+    }
+}
+.swiper-button-prev {
+    left: -2em;
+}
+.swiper-button-next {
+    right: -2em;
+}
