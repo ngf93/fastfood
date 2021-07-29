@@ -16,7 +16,7 @@
 	<header>
 		<div class="container">
 			<a href="#" class="logo"><img src="img/logo.svg" alt="Название сайта"></a>
-			<nav>
+			<nav class="d-none d-xl-block">
 				<ul>
 					<li><a href="#">Меню</a></li>
 					<li><a href="#">О нас</a></li>
@@ -133,6 +133,13 @@
 						</div>
 					</div>
 				</div>
+				<button class="btn-icon btn-icon-dark ms-3 d-block d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#right-menu">
+					<svg viewBox="0 0 33 34" xmlns="http://www.w3.org/2000/svg">
+						<path d="M4.125 17H28.875"/>
+						<path d="M4.125 8.75H28.875"/>
+						<path d="M4.125 25.25H28.875"/>
+					</svg>					
+				</button>
 			</div>
 		</div>
 	</header>
@@ -205,13 +212,13 @@
 		<section id="sec-2" class="mb-8">
 			<div class="container">
 				<h2>Наше меню</h2>
-				<div class="row row-cols-4 g-4">
+				<div class="row row-cols-3 row-cols-xl-4 g-4 justify-content-center">
 					<div>
 						<div class="categorie">
 							<a href="#" class="stretched-link">link</a>
 							<img src="img/img-2.jpg" alt="">
 							<div class="text">
-								<h4>Супы</h4>
+								<h4>Супы Lorem ipsum dolor sit amet consectetur, adipisicing elit</h4>
 							</div>
 						</div>
 					</div>
@@ -311,89 +318,176 @@
 									<img src="img/products/margarita.png" alt="">
 									<h5>Пицца «Маргарита»</h5>
 									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
-									<div class="radio-group">
+									<div class="switch">
 										<div class="indicator"></div>
-										<div class="radio">
-											<input type="radio" name="diam" value="25 см" onclick="moveInd(this.closest('.radio-group'))">
-											<label>25 см</label>
-										</div>
-										<div class="radio">
-											<input type="radio" name="diam" value="30 см" onclick="moveInd(this.closest('.radio-group'))">
-											<label>30 см</label>
-										</div>
-										<div class="radio">
-											<input type="radio" name="diam" value="35 см" onclick="moveInd(this.closest('.radio-group'))" checked>
-											<label>35 см</label>
-										</div>
+										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+										<button type="button" class="switch-option active"  onclick="switchTo(this);">30 см</button>
+										<button type="button" class="switch-option" onclick="switchTo(this);">35 см</button>
 									</div>
-									<div class="d-flex justify-content-between mb-3">
+									<div class="d-flex justify-content-between align-items-center">
 										<div>
 											<div class="primary">400 грамм</div>
-											<div class="fw-5 fs-15">300 ₽</div>
+											<div>
+												<span class="fw-5 fs-15 align-middle">300 ₽</span>
+												<span class="gray text-decoration-line-through align-middle">500 ₽</span>
+											</div>
 										</div>
-										<button type="button" class="btn btn-1">В корзине</button>
+										<div class="add-to-cart">
+											<div class="add-count">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/minus2.svg" alt="">				
+												</button>
+												<input type="number" placeholder="0" value="1">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/plus2.svg" alt="">		
+												</button>
+											</div>
+											<button type="button" class="add-prod" onclick="this.previousElementSibling.style.marginTop='0';">В корзине</button>
+										</div>
 									</div>
-									<input type="checkbox" class="compare">
+									<button type="button" class="btn-icon compare" data-state="on" onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="product-preview">
 									<img src="img/products/margarita.png" alt="">
 									<h5>Пицца «Фрутти ди Маро»</h5>
-									<div class="mb-4">Тесто, томатный соус, сыр, морепродукты, лук, орегано</div>
-									<div class="d-flex justify-content-between mb-3">
+									<div class="ingredients">Тесто, томатный соус, сыр, морепродукты, лук, орегано</div>
+									<div class="switch">
+										<div class="indicator"></div>
+										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+										<button type="button" class="switch-option active"  onclick="switchTo(this);">30 см</button>
+									</div>
+									<div class="d-flex justify-content-between align-items-center">
 										<div>
 											<div class="primary">400 грамм</div>
-											<div class="fw-5 fs-15">300 ₽</div>
+											<div>
+												<span class="fw-5 fs-15 align-middle">300 ₽</span>
+												<span class="gray text-decoration-line-through align-middle"></span>
+											</div>
 										</div>
-										<button type="button" class="btn btn-1">В корзине</button>
+										<div class="add-to-cart">
+											<div class="add-count">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/minus2.svg" alt="">				
+												</button>
+												<input type="number" placeholder="0" value="1">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/plus2.svg" alt="">		
+												</button>
+											</div>
+											<button type="button" class="add-prod" onclick="this.previousElementSibling.style.marginTop='0';">В корзине</button>
+										</div>
 									</div>
-									<input type="checkbox" class="compare">
+									<button type="button" class="btn-icon compare" data-state="off" onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="product-preview">
 									<img src="img/products/margarita.png" alt="">
 									<h5>Пицца «Баварская»</h5>
-									<div class="mb-4">Тесто, томатный соус, сыр, бекон, колбаски пеппероне, соус бафало</div>
-									<div class="d-flex justify-content-between mb-3">
+									<div class="ingredients">Тесто, томатный соус, сыр, бекон, колбаски пеппероне, соус бафало</div>
+									<div class="switch">
+										<div class="indicator"></div>
+										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+										<button type="button" class="switch-option active"  onclick="switchTo(this);">30 см</button>
+									</div>
+									<div class="d-flex justify-content-between align-items-center">
 										<div>
 											<div class="primary">400 грамм</div>
-											<div class="fw-5 fs-15">300 ₽</div>
+											<div>
+												<span class="fw-5 fs-15 align-middle">300 ₽</span>
+												<span class="gray text-decoration-line-through align-middle"></span>
+											</div>
 										</div>
-										<button type="button" class="btn btn-1">В корзине</button>
+										<div class="add-to-cart">
+											<div class="add-count">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/minus2.svg" alt="">				
+												</button>
+												<input type="number" placeholder="0" value="1">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/plus2.svg" alt="">		
+												</button>
+											</div>
+											<button type="button" class="add-prod" onclick="this.previousElementSibling.style.marginTop='0';">В корзине</button>
+										</div>
 									</div>
-									<input type="checkbox" class="compare">
+									<button type="button" class="btn-icon compare" data-state="off" onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="product-preview">
 									<img src="img/products/margarita.png" alt="">
 									<h5>Пицца «Маргарита»</h5>
-									<div class="mb-4">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
-									<div class="d-flex justify-content-between mb-3">
+									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
+									<div class="switch">
+										<div class="indicator"></div>
+										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+										<button type="button" class="switch-option active"  onclick="switchTo(this);">30 см</button>
+									</div>
+									<div class="d-flex justify-content-between align-items-center">
 										<div>
 											<div class="primary">400 грамм</div>
-											<div class="fw-5 fs-15">300 ₽</div>
+											<div>
+												<span class="fw-5 fs-15 align-middle">300 ₽</span>
+												<span class="gray text-decoration-line-through align-middle">500 ₽</span>
+											</div>
 										</div>
-										<button type="button" class="btn btn-1">В корзине</button>
+										<div class="add-to-cart">
+											<div class="add-count">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/minus2.svg" alt="">				
+												</button>
+												<input type="number" placeholder="0" value="1">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/plus2.svg" alt="">		
+												</button>
+											</div>
+											<button type="button" class="add-prod" onclick="this.previousElementSibling.style.marginTop='0';">В корзине</button>
+										</div>
 									</div>
-									<input type="checkbox" class="compare">
+									<button type="button" class="btn-icon compare" data-state="off" onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="product-preview">
 									<img src="img/products/margarita.png" alt="">
 									<h5>Пицца «Маргарита»</h5>
-									<div class="mb-4">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
-									<div class="d-flex justify-content-between mb-3">
+									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
+									<div class="switch">
+										<div class="indicator"></div>
+										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+										<button type="button" class="switch-option active"  onclick="switchTo(this);">30 см</button>
+										<button type="button" class="switch-option" onclick="switchTo(this);">35 см</button>
+									</div>
+									<div class="d-flex justify-content-between align-items-center">
 										<div>
 											<div class="primary">400 грамм</div>
-											<div class="fw-5 fs-15">300 ₽</div>
+											<div>
+												<span class="fw-5 fs-15 align-middle">300 ₽</span>
+												<span class="gray text-decoration-line-through align-middle">500 ₽</span>
+											</div>
 										</div>
-										<button type="button" class="btn btn-1">В корзине</button>
+										<div class="add-to-cart">
+											<div class="add-count">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/minus2.svg" alt="">				
+												</button>
+												<input type="number" placeholder="0" value="1">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/plus2.svg" alt="">		
+												</button>
+											</div>
+											<button type="button" class="add-prod" onclick="this.previousElementSibling.style.marginTop='0';">В корзине</button>
+										</div>
 									</div>
-									<input type="checkbox" class="compare">
+									<button type="button" class="btn-icon compare" data-state="on" onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
 								</div>
 							</div>
 						</div>
@@ -411,25 +505,25 @@
 		<section id="sec-4" class="mb-8">
 			<div class="container">
 				<h2>Мы — профессионалы своего дела!</h2>
-				<div class="row align-items-center justify-content-center mb-5">
-					<div class="col-3">
+				<div class="row align-items-center justify-content-center mb-4 mb-xl-5">
+					<div class="col-5 col-xl-4 col-xxl-3">
 						<img src="img/img-12.jpg" alt="" class="round-img">
 					</div>
-					<div class="col-5">
+					<div class="col-7 col-xl-6 col-xxl-5">
 						<div class="fs-20 fw-5 mb-4">Только свежие ингредиенты</div>
 						<div class="fs-15">Лишь тщательные исследования конкурентов и по сей день остаются уделом либералов, которые жаждут быть ассоциативно распределены по отраслям! Идейные соображения высшего порядка, а также граница обучения кадров предопределяет высокую востребованность форм воздействия. </div>
 					</div>
 				</div>
-				<div class="row flex-row-reverse align-items-center justify-content-center mb-5">
-					<div class="col-3">
+				<div class="row flex-row-reverse align-items-center justify-content-center mb-4 mb-xl-5">
+					<div class="col-5 col-xl-4 col-xxl-3">
 						<img src="img/img-13.jpg" alt="" class="round-img">
 					</div>
-					<div class="col-5">
+					<div class="col-7 col-xl-6 col-xxl-5">
 						<div class="fs-20 fw-5 mb-4">Готовим пиццу в печи</div>
 						<div class="fs-15">Лишь тщательные исследования конкурентов и по сей день остаются уделом либералов, которые жаждут быть ассоциативно распределены по отраслям! Идейные соображения высшего порядка, а также граница обучения кадров предопределяет высокую востребованность форм воздействия. </div>
 					</div>
 				</div>
-				<div class="row align-items-center justify-content-center mb-5">
+				<div class="row align-items-center justify-content-center mb-4 mb-xl-5">
 					<div class="col-5 col-xl-4 col-xxl-3">
 						<img src="img/img-14.jpg" alt="" class="round-img">
 					</div>
@@ -444,49 +538,94 @@
 		<section id="sec-5" class="mb-8">
 			<div class="container">
 				<h2>Акции и спецпредложения</h2>
-				<div class="swiper-3">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="offer">
-								<div class="visual">
-									<img src="img/img-15.jpg" alt="">
-									<div class="text">
-										<div class="title">
-											<span>30%</span> скидка
+				<div class="position-relative">
+					<div class="swiper-3">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="offer">
+									<div class="visual">
+										<img src="img/img-15.jpg" alt="">
+										<div class="text">
+											<div class="title">
+												<span>30%</span> скидка
+											</div>
+											<div>действует в будние дни с 10:00 до 12:00</div>
 										</div>
-										<div>действует в будние дни с 10:00 до 12:00</div>
 									</div>
+									<h3>Time for Breakfast</h3>
 								</div>
-								<h3>Time for Breakfast</h3>
 							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="offer">
-								<div class="visual">
-									<img src="img/img-16.jpg" alt="">
-									<div class="text">
-										<div class="title">
-											<span>40%</span> скидка
+							<div class="swiper-slide">
+								<div class="offer">
+									<div class="visual">
+										<img src="img/img-16.jpg" alt="">
+										<div class="text">
+											<div class="title">
+												<span>40%</span> скидка
+											</div>
+											<div>действует в будние дни с 12:00 до 16:00</div>
 										</div>
-										<div>действует в будние дни с 12:00 до 16:00</div>
 									</div>
+									<h3>Комбо-ланчи</h3>
 								</div>
-								<h3>Комбо-ланчи</h3>
 							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="offer">
-								<div class="visual">
-									<img src="img/img-17.jpg" alt="">
-									<div class="text">
-										<div class="title">
-											<span>2</span> пиццы Пепперони 
-											в подарок
+							<div class="swiper-slide">
+								<div class="offer">
+									<div class="visual">
+										<img src="img/img-17.jpg" alt="">
+										<div class="text">
+											<div class="title">
+												<span>2</span> пиццы Пепперони 
+												в подарок
+											</div>
+											<div>При предъявлении документов</div>
 										</div>
-										<div>При предъявлении документов</div>
 									</div>
+									<h3>День рождения</h3>
 								</div>
-								<h3>День рождения</h3>
+							</div>
+							<div class="swiper-slide">
+								<div class="offer">
+									<div class="visual">
+										<img src="img/img-15.jpg" alt="">
+										<div class="text">
+											<div class="title">
+												<span>30%</span> скидка
+											</div>
+											<div>действует в будние дни с 10:00 до 12:00</div>
+										</div>
+									</div>
+									<h3>Time for Breakfast</h3>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="offer">
+									<div class="visual">
+										<img src="img/img-16.jpg" alt="">
+										<div class="text">
+											<div class="title">
+												<span>40%</span> скидка
+											</div>
+											<div>действует в будние дни с 12:00 до 16:00</div>
+										</div>
+									</div>
+									<h3>Комбо-ланчи</h3>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="offer">
+									<div class="visual">
+										<img src="img/img-17.jpg" alt="">
+										<div class="text">
+											<div class="title">
+												<span>2</span> пиццы Пепперони 
+												в подарок
+											</div>
+											<div>При предъявлении документов</div>
+										</div>
+									</div>
+									<h3>День рождения</h3>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -498,7 +637,7 @@
 			<div class="container">
 				<h2>Отзывы наших клиентов</h2>
 				<div class="position-relative">
-					<div class="swiper-3">
+					<div class="swiper-reviews">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="review">
@@ -693,15 +832,15 @@
 			<div class="container">
 				<h2>Контакты</h2>
 				<div class="row g-0">
-					<div class="col-5 px-5 py-5">
+					<div class="col-5 p-4 p-xl-5">
 						<h5>Телефоны:</h5>
 						<div class="fs-15 mb-2"><a href="tel:+79879878787">+7 (987) 987-87-87</a></div>
 						<div class="fs-15 mb-2"><a href="tel:+79879876767">+7 (987) 987-67-67</a></div>
-						<h5 class="mt-5">Время работы:</h5>
+						<h5 class="mt-4 mt-xl-5">Время работы:</h5>
 						<div class="fs-15 mb-2">Заказы на доставку принимаются с 10:00 до 23:00</div>
-						<h5 class="mt-5">Адрес:</h5>
+						<h5 class="mt-4 mt-xl-5">Адрес:</h5>
 						<div class="fs-15 mb-2">г. Казань, ул. Достоевского, д.45</div>
-						<h5 class="mt-5">Вопросы и предложения:</h5>
+						<h5 class="mt-4 mt-xl-5">Вопросы и предложения:</h5>
 						<div class="fs-15 mb-2">
 							<a href="mailto:pizza@mail.ru">pizza@mail.ru</a>
 						</div>
@@ -719,9 +858,10 @@
 	<footer>
 		<div class="container">
 			<div class="row justify-content-between">
-				<div class="col-3">
-					<div class="row row-cols-2">
+				<div class="col-4 col-xl-3">
+					<div class="row row-cols-lg-2">
 						<div>
+							<button>Каталог</button>
 							<nav>
 								<ul>
 									<li><a href="">Супы</a></li>
@@ -735,7 +875,8 @@
 								</ul>
 							</nav>
 						</div>
-						<div>
+						<div class="mt-4 mt-lg-0">
+							<button>Каталог</button>
 							<nav>
 								<ul>
 									<li><a href="">Полуфабрикаты</a></li>
@@ -748,7 +889,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-3 text-center d-flex flex-column justify-content-between">
+				<div class="col-4 col-xl-3 text-center d-flex flex-column justify-content-between">
 					<div>
 						<a href="#" class="d-block mb-4"><img src="img/logo.svg" alt="Название сайта" class="img-fluid"></a>
 						<div><a href="#" class="primary">Политика конфиденциальности</a></div>
@@ -771,7 +912,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-3 d-flex flex-column justify-content-between">
+				<div class="col-4 col-xl-3 d-flex flex-column justify-content-between">
 					<div>
 						<div class="d-flex align-items-start mb-3">
 							<img src="img/icons/map-pin3.svg" alt="" class="me-2">
@@ -793,6 +934,24 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="offcanvas offcanvas-end" tabindex="-1" id="right-menu">
+		<!-- <div class="offcanvas-header">
+		  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Вне холста</h5>
+		  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+		</div> -->
+		<div class="offcanvas-body">
+			<nav>
+				<ul>
+					<li><a href="#">Меню</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">Вакансии</a></li>
+					<li><a href="#">Сравнение</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
 
 	<!-- Scripts -->
 	<script src="js/bootstrap.bundle.min.js"></script>

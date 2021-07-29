@@ -1,4 +1,4 @@
-/* фиксированная шапка */
+/* sticky header */
 window.addEventListener('scroll', function() {
   let h_header = document.querySelector('header').offsetHeight;
   let st = window.pageYOffset;
@@ -11,53 +11,44 @@ window.addEventListener('scroll', function() {
 
 
 function toggleCart(parent){
-  // parent.querySelector('.cart-preview').style.display = 'block';
   parent.querySelector('.cart-preview').style.display = (parent.querySelector('.cart-preview').style.display == 'block') ? 'none' : 'block'
 }
 
+/* compare and favorite buttons state */
+function toggleState(btn){
+  btn.dataset.state = (btn.dataset.state == 'off') ? 'on' : 'off'
+}
 
-// function showInd(ind){
-//   console.log(1);
-//   let parent = ind.closest('radio-group');
-//   let arr_inputs = Array.from(parent.querySelectorAll('.radio'));
-//   let count = arr_inputs.length;
-//   ind.style.width = 100/count + "%";
-// }
 
-document.addEventListener('DOMContentLoaded', function() {
-  let radioGroups = Array.from(document.querySelectorAll('.radio-group'));
-  radioGroups.forEach(function(item, i, arr) {
+/* switch buttons */
+window.onload = function() {
+  let switchDivs = Array.from(document.querySelectorAll('.switch'));
+  switchDivs.forEach(function(item, i, arr) {
     let ind = item.querySelector('.indicator');
-    let arr_inputs = Array.from(item.querySelectorAll('.radio'));
-    ind.style.width = 100/arr_inputs.length + '%';
-    console.log(100/arr_inputs.length + '%');
-    moveInd(item);
+    let arr_options = Array.from(item.querySelectorAll('.switch-option'));
+    let cur_opt_index;
+    for(let i = 0; i < arr_options.length; i++){
+      if(arr_options[i].classList.contains('active')){
+        cur_opt_index = i;
+        ind.style.width = 100/arr_options.length + '%';
+        ind.style.transform = moveInd(cur_opt_index);
+      }
+    }
   });
-}, false);
-
-// window.onload = function() {
-//   let radioGroups = Array.from(document.querySelectorAll('.radio-group'));
-//   radioGroups.forEach(function(item, i, arr) {
-//     let ind = item.querySelector('.indicator');
-//     let arr_inputs = Array.from(item.querySelectorAll('.radio'));
-//     ind.style.width = 100/arr_inputs.length + '%';
-//     console.log(100/arr_inputs.length + '%');
-//     moveInd(item);
-//   });
-// }
-
-function moveInd(group){
-  let ind = group.querySelector('.indicator');
-  console.log('ind = '+ind);
-  let arr_inputs = Array.from(group.querySelectorAll('.radio input'));
-  let cur_inp_index;
-  for(let i = 0; i < arr_inputs.length; i++){
-    if(arr_inputs[i].checked){
-      cur_inp_index = i;
+}
+function switchTo(btn){
+  let parent = btn.parentElement;
+  let ind = parent.querySelector('.indicator');
+  let arr_options = Array.from(parent.querySelectorAll('.switch-option'));
+  for(let i = 0; i < arr_options.length; i++){
+    arr_options[i].classList.remove('active');
+    if(btn == arr_options[i]){
+      btn.classList.add('active');
+      ind.style.transform = moveInd(i);
     }
   }
-  console.log('cur_inp_index = '+cur_inp_index);
-  let shift = cur_inp_index*100 + '%';
-  console.log('shift = '+shift);
-  ind.style.transform = 'translateX('+shift+')';
+}
+function moveInd(index){
+  let shift = 'translateX('+index*100 +'%)';
+  return shift;
 }
