@@ -16,8 +16,15 @@ var swiper1 = new Swiper('.swiper-4', {
 });
   
 var swiper2 = new Swiper('.swiper-3', {
-    slidesPerView: 3,
+    slidesPerView: 2,
     spaceBetween: 16,
+    breakpoints: {
+        // when window width is >= 992px
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+        }
+    }
 });
 
 var swiper3 = new Swiper('.swiper-reviews', {
@@ -32,8 +39,8 @@ var swiper3 = new Swiper('.swiper-reviews', {
         prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-        // when window width is >= 993px
-        993: {
+        // when window width is >= 992px
+        992: {
             slidesPerView: 3,
             spaceBetween: 16,
         }

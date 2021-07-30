@@ -1,13 +1,16 @@
 /* sticky header */
-window.addEventListener('scroll', function() {
-  let h_header = document.querySelector('header').offsetHeight;
-  let st = window.pageYOffset;
-  if (st > h_header) {
-    document.querySelector('header').classList.add("h-sticky");
-  } else {
-    document.querySelector('header').classList.remove("h-sticky");
-  }
-});
+if (window.matchMedia("(min-width: 768px)").matches) {
+  console.log(1);
+  window.addEventListener('scroll', function() {
+    let h_header = document.querySelector('header').offsetHeight;
+    let st = window.pageYOffset;
+    if (st > h_header) {
+      document.querySelector('header').classList.add("h-sticky");
+    } else {
+      document.querySelector('header').classList.remove("h-sticky");
+    }
+  });
+}
 
 
 function toggleCart(parent){
