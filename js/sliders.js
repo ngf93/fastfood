@@ -15,13 +15,11 @@ var swiper1 = new Swiper('.swiper-popular', {
         768: {
             slidesPerView: 3,
             spaceBetween: 16,
-            pagination: false,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
         },
-        // when window width is >= 1200px
         1200: {
             slidesPerView: 4,
             spaceBetween: 16,

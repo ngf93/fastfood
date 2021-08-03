@@ -22,6 +22,16 @@ function toggleState(btn){
   btn.dataset.state = (btn.dataset.state == 'off') ? 'on' : 'off'
 }
 
+/* password button state change */
+function change_state(btn) {
+  if(btn.dataset.state == 'invisible'){
+    btn.previousElementSibling.setAttribute('type', 'text');
+    btn.dataset.state = 'visible';
+  } else {
+    btn.previousElementSibling.setAttribute('type', 'password');
+    btn.dataset.state = 'invisible';
+  }
+}
 
 /* switch buttons */
 window.onload = function() {
