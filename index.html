@@ -10,20 +10,20 @@
 	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Rubik:wght@400;500&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+	<img src="img/bg/blobs.svg" alt="Фон" class="body-bg">
+
 	<header>
 		<div class="container">
-			<a href="#" class="logo"><img src="img/logo.svg" alt="Название сайта"></a>
+			<a href="index.html" class="logo"><img src="img/logo.svg" alt="Название сайта"></a>
 			<nav class="d-none d-xl-block">
 				<ul>
-					<li><a href="#">Меню</a></li>
-					<li><a href="#">О нас</a></li>
-					<li><a href="#">Доставка и оплата</a></li>
-					<li><a href="#">Вакансии</a></li>
+					<li><a href="menu.html">Меню</a></li>
+					<li><a href="about.html">О нас</a></li>
+					<li><a href="delivery.html">Доставка и оплата</a></li>
+					<li><a href="vacancy.html">Вакансии</a></li>
 					<li><a href="#">Избранное</a></li>
 				</ul>
 			</nav>
@@ -252,10 +252,10 @@
 		<section id="sec-2" class="mb-8">
 			<div class="container">
 				<h2>Наше меню</h2>
-				<div class="row row-cols-2 row-cols-sm-3 row-cols-xl-4 gx-2 gy-3 g-md-4 justify-content-center">
+				<div class="row row-cols-2 row-cols-sm-3 row-cols-xl-4 gx-2 gy-3 g-md-4">
 					<div>
 						<div class="categorie">
-							<a href="#" class="stretched-link">link</a>
+							<a href="categorie.html" class="stretched-link">link</a>
 							<img src="img/img-2.jpg" alt="">
 							<div class="text">
 								<h4>Супы Lorem ipsum dolor sit amet consectetur, adipisicing elit</h4>
@@ -264,7 +264,7 @@
 					</div>
 					<div>
 						<div class="categorie">
-							<a href="#" class="stretched-link">link</a>
+							<a href="categorie.html" class="stretched-link">link</a>
 							<img src="img/img-3.jpg" alt="">
 							<div class="text">
 								<h4>Бургеры</h4>
@@ -273,7 +273,7 @@
 					</div>
 					<div>
 						<div class="categorie">
-							<a href="#" class="stretched-link">link</a>
+							<a href="categorie.html" class="stretched-link">link</a>
 							<img src="img/img-4.jpg" alt="">
 							<div class="text">
 								<h4>Пицца</h4>
@@ -282,7 +282,7 @@
 					</div>
 					<div>
 						<div class="categorie">
-							<a href="#" class="stretched-link">link</a>
+							<a href="categorie.html" class="stretched-link">link</a>
 							<img src="img/img-5.jpg" alt="">
 							<div class="text">
 								<h4>Салаты</h4>
@@ -291,7 +291,7 @@
 					</div>
 					<div>
 						<div class="categorie">
-							<a href="#" class="stretched-link">link</a>
+							<a href="categorie.html" class="stretched-link">link</a>
 							<img src="img/img-6.jpg" alt="">
 							<div class="text">
 								<h4>Роллы</h4>
@@ -300,7 +300,7 @@
 					</div>
 					<div>
 						<div class="categorie">
-							<a href="#" class="stretched-link">link</a>
+							<a href="categorie.html" class="stretched-link">link</a>
 							<img src="img/img-7.jpg" alt="">
 							<div class="text">
 								<h4>Паста</h4>
@@ -309,7 +309,7 @@
 					</div>
 					<div>
 						<div class="categorie">
-							<a href="#" class="stretched-link">link</a>
+							<a href="categorie.html" class="stretched-link">link</a>
 							<img src="img/img-8.jpg" alt="">
 							<div class="text">
 								<h4>Горячие закуски</h4>
@@ -318,7 +318,7 @@
 					</div>
 					<div>
 						<div class="categorie">
-							<a href="#" class="stretched-link">link</a>
+							<a href="categorie.html" class="stretched-link">link</a>
 							<img src="img/img-9.jpg" alt="">
 							<div class="text">
 								<h4>Детское меню</h4>
@@ -327,7 +327,7 @@
 					</div>
 					<div>
 						<div class="categorie">
-							<a href="#" class="stretched-link">link</a>
+							<a href="categorie.html" class="stretched-link">link</a>
 							<img src="img/img-10.jpg" alt="">
 							<div class="text">
 								<h4>Полуфабрикаты</h4>
@@ -336,7 +336,7 @@
 					</div>
 					<div>
 						<div class="categorie">
-							<a href="#" class="stretched-link">link</a>
+							<a href="categorie.html" class="stretched-link">link</a>
 							<img src="img/img-11.jpg" alt="">
 							<div class="text">
 								<h4>Напитки</h4>
@@ -362,20 +362,16 @@
 									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
 									<div class="switch">
 										<div class="indicator"></div>
-										<button type="button" class="switch-option" onclick="switchTo(this);">25
-											см</button>
-										<button type="button" class="switch-option active" onclick="switchTo(this);">30
-											см</button>
-										<button type="button" class="switch-option" onclick="switchTo(this);">35
-											см</button>
+										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+										<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
+										<button type="button" class="switch-option" onclick="switchTo(this);">35 см</button>
 									</div>
 									<div class="d-md-flex justify-content-between align-items-center">
-										<div
-											class="price d-flex flex-row flex-md-column align-items-center justify-content-between mb-2">
+										<div class="price d-flex flex-row flex-md-column align-items-center align-items-md-start justify-content-between mb-2 mb-md-0">
 											<div class="primary">400 грамм</div>
-											<div class="d-flex flex-wrap flex-row-reverse flex-md-column align-items-center">
+											<div class="d-flex flex-wrap flex-row-reverse flex-md-row align-items-center">
 												<span class="fw-5 fs-15 align-middle">300 ₽</span>
-												<span class="gray text-decoration-line-through align-middle me-1 me-md-0">500 ₽</span>
+												<span class="gray text-decoration-line-through align-middle me-1 me-md-0 ms-1">500 ₽</span>
 											</div>
 										</div>
 										<div class="add-to-cart">
@@ -388,14 +384,11 @@
 													<img src="img/icons/plus2.svg" alt="">
 												</button>
 											</div>
-											<button type="button" class="add-prod"
-												onclick="this.previousElementSibling.style.marginTop='0';">Добавить</button>
+											<button type="button" class="add-prod" onclick="this.previousElementSibling.style.marginTop='0';">Добавить</button>
 										</div>
 									</div>
-									<button type="button" class="btn-icon compare" data-state="on"
-										onclick="toggleState(this);"></button>
-									<button type="button" class="btn-icon favorite" data-state="off"
-										onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon compare" data-state="on" onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
 								</div>
 							</div>
 							<div class="swiper-slide">
@@ -407,18 +400,15 @@
 									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
 									<div class="switch">
 										<div class="indicator"></div>
-										<button type="button" class="switch-option" onclick="switchTo(this);">25
-											см</button>
-										<button type="button" class="switch-option active" onclick="switchTo(this);">30
-											см</button>
+										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+										<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
 									</div>
 									<div class="d-md-flex justify-content-between align-items-center">
-										<div
-											class="price d-flex flex-row flex-md-column align-items-center justify-content-between mb-2">
+										<div class="price d-flex flex-row flex-md-column align-items-center align-items-md-start justify-content-between mb-2 mb-md-0">
 											<div class="primary">400 грамм</div>
-											<div class="d-flex flex-wrap flex-row-reverse flex-md-column align-items-center">
+											<div class="d-flex flex-wrap flex-row-reverse flex-md-row align-items-center">
 												<span class="fw-5 fs-15 align-middle">300 ₽</span>
-												<span class="gray text-decoration-line-through align-middle me-1 me-md-0">500 ₽</span>
+												<span class="gray text-decoration-line-through align-middle me-1 me-md-0 ms-1">500 ₽</span>
 											</div>
 										</div>
 										<div class="add-to-cart">
@@ -431,59 +421,11 @@
 													<img src="img/icons/plus2.svg" alt="">
 												</button>
 											</div>
-											<button type="button" class="add-prod"
-												onclick="this.previousElementSibling.style.marginTop='0';">Добавить</button>
+											<button type="button" class="add-prod" onclick="this.previousElementSibling.style.marginTop='0';">Добавить</button>
 										</div>
 									</div>
-									<button type="button" class="btn-icon compare" data-state="on"
-										onclick="toggleState(this);"></button>
-									<button type="button" class="btn-icon favorite" data-state="off"
-										onclick="toggleState(this);"></button>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="product-preview">
-									<a href="">
-										<img src="img/products/margarita.png" alt="">
-										<h5>Пицца «Баварская»</h5>
-									</a>
-									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
-									<div class="switch">
-										<div class="indicator"></div>
-										<button type="button" class="switch-option" onclick="switchTo(this);">25
-											см</button>
-										<button type="button" class="switch-option active" onclick="switchTo(this);">30
-											см</button>
-										<button type="button" class="switch-option" onclick="switchTo(this);">35
-											см</button>
-									</div>
-									<div class="d-md-flex justify-content-between align-items-center">
-										<div
-											class="price d-flex flex-row flex-md-column align-items-center justify-content-between mb-2">
-											<div class="primary">400 грамм</div>
-											<div class="d-flex flex-wrap flex-row-reverse flex-md-column align-items-center">
-												<span class="fw-5 fs-15 align-middle">300 ₽</span>
-												<span class="gray text-decoration-line-through align-middle me-1 me-md-0">500 ₽</span>
-											</div>
-										</div>
-										<div class="add-to-cart">
-											<div class="add-count">
-												<button class="btn-mini" type="button">
-													<img src="img/icons/minus2.svg" alt="">
-												</button>
-												<input type="number" placeholder="0" value="1">
-												<button class="btn-mini" type="button">
-													<img src="img/icons/plus2.svg" alt="">
-												</button>
-											</div>
-											<button type="button" class="add-prod"
-												onclick="this.previousElementSibling.style.marginTop='0';">Добавить</button>
-										</div>
-									</div>
-									<button type="button" class="btn-icon compare" data-state="on"
-										onclick="toggleState(this);"></button>
-									<button type="button" class="btn-icon favorite" data-state="off"
-										onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon compare" data-state="on" onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
 								</div>
 							</div>
 							<div class="swiper-slide">
@@ -495,20 +437,16 @@
 									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
 									<div class="switch">
 										<div class="indicator"></div>
-										<button type="button" class="switch-option" onclick="switchTo(this);">25
-											см</button>
-										<button type="button" class="switch-option active" onclick="switchTo(this);">30
-											см</button>
-										<button type="button" class="switch-option" onclick="switchTo(this);">35
-											см</button>
+										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+										<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
+										<button type="button" class="switch-option" onclick="switchTo(this);">35 см</button>
 									</div>
 									<div class="d-md-flex justify-content-between align-items-center">
-										<div
-											class="price d-flex flex-row flex-md-column align-items-center justify-content-between mb-2">
+										<div class="price d-flex flex-row flex-md-column align-items-center align-items-md-start justify-content-between mb-2 mb-md-0">
 											<div class="primary">400 грамм</div>
-											<div class="d-flex flex-wrap flex-row-reverse flex-md-column align-items-center">
+											<div class="d-flex flex-wrap flex-row-reverse flex-md-row align-items-center">
 												<span class="fw-5 fs-15 align-middle">300 ₽</span>
-												<span class="gray text-decoration-line-through align-middle me-1 me-md-0">500 ₽</span>
+												<span class="gray text-decoration-line-through align-middle me-1 me-md-0 ms-1">500 ₽</span>
 											</div>
 										</div>
 										<div class="add-to-cart">
@@ -521,14 +459,48 @@
 													<img src="img/icons/plus2.svg" alt="">
 												</button>
 											</div>
-											<button type="button" class="add-prod"
-												onclick="this.previousElementSibling.style.marginTop='0';">Добавить</button>
+											<button type="button" class="add-prod" onclick="this.previousElementSibling.style.marginTop='0';">Добавить</button>
 										</div>
 									</div>
-									<button type="button" class="btn-icon compare" data-state="on"
-										onclick="toggleState(this);"></button>
-									<button type="button" class="btn-icon favorite" data-state="off"
-										onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon compare" data-state="on" onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="product-preview">
+									<a href="">
+										<img src="img/products/margarita.png" alt="">
+										<h5>Пицца «Фрутти ди Маро»</h5>
+									</a>
+									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
+									<div class="switch">
+										<div class="indicator"></div>
+										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+										<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
+									</div>
+									<div class="d-md-flex justify-content-between align-items-center">
+										<div class="price d-flex flex-row flex-md-column align-items-center align-items-md-start justify-content-between mb-2 mb-md-0">
+											<div class="primary">400 грамм</div>
+											<div class="d-flex flex-wrap flex-row-reverse flex-md-row align-items-center">
+												<span class="fw-5 fs-15 align-middle">300 ₽</span>
+												<span class="gray text-decoration-line-through align-middle me-1 me-md-0 ms-1">500 ₽</span>
+											</div>
+										</div>
+										<div class="add-to-cart">
+											<div class="add-count">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/minus2.svg" alt="">
+												</button>
+												<input type="number" placeholder="0" value="1">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/plus2.svg" alt="">
+												</button>
+											</div>
+											<button type="button" class="add-prod" onclick="this.previousElementSibling.style.marginTop='0';">Добавить</button>
+										</div>
+									</div>
+									<button type="button" class="btn-icon compare" data-state="on" onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
 								</div>
 							</div>
 							<div class="swiper-slide">
@@ -540,20 +512,16 @@
 									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
 									<div class="switch">
 										<div class="indicator"></div>
-										<button type="button" class="switch-option" onclick="switchTo(this);">25
-											см</button>
-										<button type="button" class="switch-option active" onclick="switchTo(this);">30
-											см</button>
-										<button type="button" class="switch-option" onclick="switchTo(this);">35
-											см</button>
+										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+										<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
+										<button type="button" class="switch-option" onclick="switchTo(this);">35 см</button>
 									</div>
 									<div class="d-md-flex justify-content-between align-items-center">
-										<div
-											class="price d-flex flex-row flex-md-column align-items-center justify-content-between mb-2">
+										<div class="price d-flex flex-row flex-md-column align-items-center align-items-md-start justify-content-between mb-2 mb-md-0">
 											<div class="primary">400 грамм</div>
-											<div class="d-flex flex-wrap flex-row-reverse flex-md-column align-items-center">
+											<div class="d-flex flex-wrap flex-row-reverse flex-md-row align-items-center">
 												<span class="fw-5 fs-15 align-middle">300 ₽</span>
-												<span class="gray text-decoration-line-through align-middle me-1 me-md-0">500 ₽</span>
+												<span class="gray text-decoration-line-through align-middle me-1 me-md-0 ms-1">500 ₽</span>
 											</div>
 										</div>
 										<div class="add-to-cart">
@@ -566,14 +534,48 @@
 													<img src="img/icons/plus2.svg" alt="">
 												</button>
 											</div>
-											<button type="button" class="add-prod"
-												onclick="this.previousElementSibling.style.marginTop='0';">Добавить</button>
+											<button type="button" class="add-prod" onclick="this.previousElementSibling.style.marginTop='0';">Добавить</button>
 										</div>
 									</div>
-									<button type="button" class="btn-icon compare" data-state="on"
-										onclick="toggleState(this);"></button>
-									<button type="button" class="btn-icon favorite" data-state="off"
-										onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon compare" data-state="on" onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="product-preview">
+									<a href="">
+										<img src="img/products/margarita.png" alt="">
+										<h5>Пицца «Фрутти ди Маро»</h5>
+									</a>
+									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
+									<div class="switch">
+										<div class="indicator"></div>
+										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+										<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
+									</div>
+									<div class="d-md-flex justify-content-between align-items-center">
+										<div class="price d-flex flex-row flex-md-column align-items-center align-items-md-start justify-content-between mb-2 mb-md-0">
+											<div class="primary">400 грамм</div>
+											<div class="d-flex flex-wrap flex-row-reverse flex-md-row align-items-center">
+												<span class="fw-5 fs-15 align-middle">300 ₽</span>
+												<span class="gray text-decoration-line-through align-middle me-1 me-md-0 ms-1">500 ₽</span>
+											</div>
+										</div>
+										<div class="add-to-cart">
+											<div class="add-count">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/minus2.svg" alt="">
+												</button>
+												<input type="number" placeholder="0" value="1">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/plus2.svg" alt="">
+												</button>
+											</div>
+											<button type="button" class="add-prod" onclick="this.previousElementSibling.style.marginTop='0';">Добавить</button>
+										</div>
+									</div>
+									<button type="button" class="btn-icon compare" data-state="on" onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
 								</div>
 							</div>
 						</div>
@@ -1028,14 +1030,14 @@
 							</button>
 							<nav class="d-none d-lg-block">
 								<ul>
-									<li><a href="">Супы</a></li>
-									<li><a href="">Бургеры</a></li>
-									<li><a href="">Пицца</a></li>
-									<li><a href="">Салаты</a></li>
-									<li><a href="">Роллы</a></li>
-									<li><a href="">Паста</a></li>
-									<li><a href="">Горячие закуски</a></li>
-									<li><a href="">Детское меню</a></li>
+									<li><a href="categorie.html">Супы</a></li>
+									<li><a href="categorie.html">Бургеры</a></li>
+									<li><a href="categorie.html">Пицца</a></li>
+									<li><a href="categorie.html">Салаты</a></li>
+									<li><a href="categorie.html">Роллы</a></li>
+									<li><a href="categorie.html">Паста</a></li>
+									<li><a href="categorie.html">Горячие закуски</a></li>
+									<li><a href="categorie.html">Детское меню</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -1053,8 +1055,8 @@
 								<ul>
 									<li><a href="">Полуфабрикаты</a></li>
 									<li><a href="">Напитки</a></li>
-									<li><a href="">О нас</a></li>
-									<li><a href="">Доставка и оплата</a></li>
+									<li><a href="about.html">О нас</a></li>
+									<li><a href="delivery.html">Доставка и оплата</a></li>
 									<li><a href="">Вакансии</a></li>
 								</ul>
 							</nav>
@@ -1112,45 +1114,36 @@
 
 	<!-- mobile -->
 	<footer class="mobile d-flex d-md-none">
-		<a href="" class="link active">
+		<a href="index.html" class="link active">
 			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				<path
-					d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H15.5H12H8.5H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" />
+				<path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H15.5H12H8.5H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" />
 				<path d="M8 22V12H16V22" />
 			</svg>
 		</a>
 		<a href="" class="link">
 			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				<path
-					d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" />
+				<path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" />
 				<path d="M21 20.9999L16.65 16.6499" />
 			</svg>
 		</a>
 		<a href="" class="link">
 			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				<path
-					d="M21 4H3C1.89543 4 1 4.89543 1 6V18C1 19.1046 1.89543 20 3 20H21C22.1046 20 23 19.1046 23 18V6C23 4.89543 22.1046 4 21 4Z" />
+				<path d="M21 4H3C1.89543 4 1 4.89543 1 6V18C1 19.1046 1.89543 20 3 20H21C22.1046 20 23 19.1046 23 18V6C23 4.89543 22.1046 4 21 4Z" />
 				<path d="M1 10H23" />
 			</svg>
 		</a>
 		<a href="" class="link-2">
 			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				<path
-					d="M22.4043 12.3107C22.3077 12.1131 22.3077 11.8865 22.4043 11.689L23.2994 9.85783C23.7978 8.83826 23.4029 7.62303 22.4004 7.09115L20.6 6.13584C20.4057 6.03281 20.2726 5.84943 20.2346 5.63292L19.8824 3.62532C19.6864 2.50755 18.6524 1.75643 17.5289 1.91538L15.5108 2.20085C15.293 2.2316 15.0776 2.16157 14.9196 2.00871L13.4547 0.59159C12.6391 -0.197499 11.3613 -0.197546 10.5456 0.59159L9.08072 2.00885C8.92265 2.16175 8.70726 2.23164 8.48948 2.20099L6.47139 1.91552C5.34756 1.75647 4.31398 2.50769 4.1179 3.62546L3.76578 5.63297C3.72776 5.84953 3.59459 6.03286 3.40039 6.13593L1.59993 7.09124C0.597468 7.62308 0.202595 8.8384 0.700967 9.85797L1.59604 11.6891C1.6926 11.8867 1.6926 12.1133 1.59604 12.3108L0.70092 14.1419C0.202548 15.1615 0.59742 16.3767 1.59988 16.9086L3.40034 17.8639C3.59459 17.9669 3.72776 18.1503 3.76578 18.3668L4.1179 20.3744C4.2964 21.392 5.16893 22.1056 6.17172 22.1055C6.27048 22.1055 6.3707 22.0986 6.47143 22.0843L8.48953 21.7988C8.70717 21.768 8.9227 21.8381 9.08076 21.991L10.5456 23.4081C10.9535 23.8027 11.4768 23.9999 12.0002 23.9999C12.5234 23.9998 13.047 23.8026 13.4547 23.4081L14.9196 21.991C15.0777 21.8381 15.2931 21.7683 15.5108 21.7988L17.5289 22.0843C18.6529 22.2433 19.6864 21.4921 19.8824 20.3744L20.2346 18.3669C20.2726 18.1503 20.4058 17.967 20.6 17.8639L22.4004 16.9086C23.4029 16.3767 23.7978 15.1614 23.2994 14.1419L22.4043 12.3107ZM21.7517 15.6858L19.9512 16.6411C19.3772 16.9457 18.9835 17.4875 18.8712 18.1276L18.5191 20.1352C18.4528 20.5133 18.1031 20.7674 17.7228 20.7137L15.7047 20.4282C15.0611 20.3371 14.4243 20.5442 13.9572 20.996L12.4923 22.4131C12.2164 22.68 11.784 22.68 11.508 22.4131L10.0431 20.996C9.64837 20.6141 9.13228 20.4071 8.5935 20.4071C8.49478 20.4071 8.39527 20.4141 8.29561 20.4282L6.27751 20.7136C5.89755 20.7674 5.54763 20.5133 5.48125 20.1351L5.12908 18.1275C5.01677 17.4874 4.62312 16.9456 4.04904 16.641L2.24858 15.6857C1.9094 15.5058 1.7758 15.0946 1.94441 14.7497L2.83953 12.9185C3.12491 12.3346 3.12491 11.665 2.83953 11.0811L1.94441 9.24996C1.7758 8.90501 1.9094 8.49387 2.24858 8.31392L4.04904 7.35861C4.62307 7.05398 5.01677 6.5122 5.12903 5.87208L5.48116 3.86452C5.54753 3.48634 5.89712 3.23228 6.27742 3.286L8.29552 3.57146C8.93887 3.66254 9.57595 3.4555 10.0431 3.00367L11.508 1.58655C11.7839 1.31965 12.2162 1.31965 12.4922 1.58655L13.9571 3.00367C14.4242 3.45554 15.0612 3.66254 15.7046 3.57146L17.7227 3.286C18.1027 3.23223 18.4527 3.48634 18.519 3.86452L18.8711 5.87212C18.9834 6.51224 19.3771 7.05407 19.9512 7.35861L21.7516 8.31392C22.0908 8.49387 22.2244 8.90501 22.0558 9.24996L21.1607 11.0811C20.8753 11.6649 20.8753 12.3346 21.1607 12.9185L22.0558 14.7496C22.2244 15.0946 22.0908 15.5058 21.7517 15.6858Z" />
-				<path
-					d="M17.0571 6.94294C16.7869 6.67266 16.3486 6.67266 16.0783 6.94294L6.94294 16.0784C6.67266 16.3486 6.67266 16.7869 6.94294 17.0572C7.07808 17.1923 7.25522 17.2599 7.43232 17.2599C7.60941 17.2599 7.7866 17.1923 7.92169 17.0572L17.0571 7.92178C17.3274 7.65146 17.3274 7.21327 17.0571 6.94294Z" />
-				<path
-					d="M9.2316 5.771C7.83229 5.771 6.69385 6.90944 6.69385 8.30875C6.69385 9.70805 7.83229 10.8465 9.2316 10.8465C10.6309 10.8465 11.7693 9.70805 11.7693 8.30875C11.7693 6.90944 10.6309 5.771 9.2316 5.771ZM9.2316 9.46224C8.59555 9.46224 8.0781 8.94479 8.0781 8.3087C8.0781 7.67266 8.59555 7.15521 9.2316 7.15521C9.86764 7.15521 10.3851 7.67266 10.3851 8.3087C10.3851 8.94479 9.86764 9.46224 9.2316 9.46224Z" />
-				<path
-					d="M14.7685 13.1536C13.3692 13.1536 12.2307 14.292 12.2307 15.6913C12.2307 17.0906 13.3692 18.2291 14.7685 18.2291C16.1678 18.2291 17.3062 17.0906 17.3062 15.6913C17.3062 14.292 16.1678 13.1536 14.7685 13.1536ZM14.7685 16.8448C14.1324 16.8448 13.6149 16.3274 13.6149 15.6913C13.6149 15.0553 14.1324 14.5378 14.7685 14.5378C15.4045 14.5378 15.922 15.0553 15.922 15.6913C15.922 16.3274 15.4045 16.8448 14.7685 16.8448Z" />
+				<path d="M22.4043 12.3107C22.3077 12.1131 22.3077 11.8865 22.4043 11.689L23.2994 9.85783C23.7978 8.83826 23.4029 7.62303 22.4004 7.09115L20.6 6.13584C20.4057 6.03281 20.2726 5.84943 20.2346 5.63292L19.8824 3.62532C19.6864 2.50755 18.6524 1.75643 17.5289 1.91538L15.5108 2.20085C15.293 2.2316 15.0776 2.16157 14.9196 2.00871L13.4547 0.59159C12.6391 -0.197499 11.3613 -0.197546 10.5456 0.59159L9.08072 2.00885C8.92265 2.16175 8.70726 2.23164 8.48948 2.20099L6.47139 1.91552C5.34756 1.75647 4.31398 2.50769 4.1179 3.62546L3.76578 5.63297C3.72776 5.84953 3.59459 6.03286 3.40039 6.13593L1.59993 7.09124C0.597468 7.62308 0.202595 8.8384 0.700967 9.85797L1.59604 11.6891C1.6926 11.8867 1.6926 12.1133 1.59604 12.3108L0.70092 14.1419C0.202548 15.1615 0.59742 16.3767 1.59988 16.9086L3.40034 17.8639C3.59459 17.9669 3.72776 18.1503 3.76578 18.3668L4.1179 20.3744C4.2964 21.392 5.16893 22.1056 6.17172 22.1055C6.27048 22.1055 6.3707 22.0986 6.47143 22.0843L8.48953 21.7988C8.70717 21.768 8.9227 21.8381 9.08076 21.991L10.5456 23.4081C10.9535 23.8027 11.4768 23.9999 12.0002 23.9999C12.5234 23.9998 13.047 23.8026 13.4547 23.4081L14.9196 21.991C15.0777 21.8381 15.2931 21.7683 15.5108 21.7988L17.5289 22.0843C18.6529 22.2433 19.6864 21.4921 19.8824 20.3744L20.2346 18.3669C20.2726 18.1503 20.4058 17.967 20.6 17.8639L22.4004 16.9086C23.4029 16.3767 23.7978 15.1614 23.2994 14.1419L22.4043 12.3107ZM21.7517 15.6858L19.9512 16.6411C19.3772 16.9457 18.9835 17.4875 18.8712 18.1276L18.5191 20.1352C18.4528 20.5133 18.1031 20.7674 17.7228 20.7137L15.7047 20.4282C15.0611 20.3371 14.4243 20.5442 13.9572 20.996L12.4923 22.4131C12.2164 22.68 11.784 22.68 11.508 22.4131L10.0431 20.996C9.64837 20.6141 9.13228 20.4071 8.5935 20.4071C8.49478 20.4071 8.39527 20.4141 8.29561 20.4282L6.27751 20.7136C5.89755 20.7674 5.54763 20.5133 5.48125 20.1351L5.12908 18.1275C5.01677 17.4874 4.62312 16.9456 4.04904 16.641L2.24858 15.6857C1.9094 15.5058 1.7758 15.0946 1.94441 14.7497L2.83953 12.9185C3.12491 12.3346 3.12491 11.665 2.83953 11.0811L1.94441 9.24996C1.7758 8.90501 1.9094 8.49387 2.24858 8.31392L4.04904 7.35861C4.62307 7.05398 5.01677 6.5122 5.12903 5.87208L5.48116 3.86452C5.54753 3.48634 5.89712 3.23228 6.27742 3.286L8.29552 3.57146C8.93887 3.66254 9.57595 3.4555 10.0431 3.00367L11.508 1.58655C11.7839 1.31965 12.2162 1.31965 12.4922 1.58655L13.9571 3.00367C14.4242 3.45554 15.0612 3.66254 15.7046 3.57146L17.7227 3.286C18.1027 3.23223 18.4527 3.48634 18.519 3.86452L18.8711 5.87212C18.9834 6.51224 19.3771 7.05407 19.9512 7.35861L21.7516 8.31392C22.0908 8.49387 22.2244 8.90501 22.0558 9.24996L21.1607 11.0811C20.8753 11.6649 20.8753 12.3346 21.1607 12.9185L22.0558 14.7496C22.2244 15.0946 22.0908 15.5058 21.7517 15.6858Z" />
+				<path d="M17.0571 6.94294C16.7869 6.67266 16.3486 6.67266 16.0783 6.94294L6.94294 16.0784C6.67266 16.3486 6.67266 16.7869 6.94294 17.0572C7.07808 17.1923 7.25522 17.2599 7.43232 17.2599C7.60941 17.2599 7.7866 17.1923 7.92169 17.0572L17.0571 7.92178C17.3274 7.65146 17.3274 7.21327 17.0571 6.94294Z" />
+				<path d="M9.2316 5.771C7.83229 5.771 6.69385 6.90944 6.69385 8.30875C6.69385 9.70805 7.83229 10.8465 9.2316 10.8465C10.6309 10.8465 11.7693 9.70805 11.7693 8.30875C11.7693 6.90944 10.6309 5.771 9.2316 5.771ZM9.2316 9.46224C8.59555 9.46224 8.0781 8.94479 8.0781 8.3087C8.0781 7.67266 8.59555 7.15521 9.2316 7.15521C9.86764 7.15521 10.3851 7.67266 10.3851 8.3087C10.3851 8.94479 9.86764 9.46224 9.2316 9.46224Z" />
+				<path d="M14.7685 13.1536C13.3692 13.1536 12.2307 14.292 12.2307 15.6913C12.2307 17.0906 13.3692 18.2291 14.7685 18.2291C16.1678 18.2291 17.3062 17.0906 17.3062 15.6913C17.3062 14.292 16.1678 13.1536 14.7685 13.1536ZM14.7685 16.8448C14.1324 16.8448 13.6149 16.3274 13.6149 15.6913C13.6149 15.0553 14.1324 14.5378 14.7685 14.5378C15.4045 14.5378 15.922 15.0553 15.922 15.6913C15.922 16.3274 15.4045 16.8448 14.7685 16.8448Z" />
 			</svg>
 		</a>
 		<a href="" class="link">
 			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				<path
-					d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" />
-				<path
-					d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" />
+				<path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" />
+				<path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" />
 			</svg>
 		</a>
 	</footer>
@@ -1163,6 +1156,11 @@
 					<img src="img/icons/user-white.svg" alt="">
 					<span class="fw-5">Войти</span>
 				</button>
+				<button type="button" data-bs-toggle="modal" data-bs-target="#city" class="d-flex d-md-none align-items-center mb-4">
+					<img src="img/icons/map-pin.svg" alt="город" class="icon me-2">
+					<span class="fw-5 bb-dash">г. Казань</span>
+					<img src="img/icons/chevron-down.svg" alt="выбрать" class="ms-2">
+				</button>
 				<ul>
 					<li class="d-block d-md-none">
 						<a href="#">
@@ -1172,7 +1170,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="menu.html">
 							<img src="img/icons/menu.svg" alt="Меню" class="icon me-2">
 							Меню
 						</a>
@@ -1190,13 +1188,13 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="delivery.html">
 							<img src="img/icons/delivery.svg" alt="Доставка и оплата" class="icon me-2">
 							Доставка и оплата
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="about.html">
 							<img src="img/icons/info.svg" alt="О нас" class="icon me-2">
 							О нас
 						</a>
@@ -1239,11 +1237,38 @@
 				<div class="modal-body">
 					<h5 class="text-start">Выберите свой город:</h5>
 					<form action="">
-						<input type="search" placeholder="Начните ввод..." class="mb-4">
-						<select name="" id="">
-							<option value="var 1">var 1</option>
-							<option value="var 1">var 1</option>
-						</select>
+						<input type="search" placeholder="Начните ввод..." class="search-in-list mb-4">
+						<div class="search-list">
+							<div class="radio mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Москва">
+								<div>Москва</div>
+							</div>
+							<div class="radio mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Санкт-Петербург">
+								<div>Санкт-Петербург</div>
+							</div>
+							<div class="radio mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Владивосток">
+								<div>Владивосток</div>
+							</div>
+							<div class="radio mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Самара">
+								<div>Самара</div>
+							</div>
+							<div class="radio mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Казань">
+								<div>Казань</div>
+							</div>
+							<div class="radio mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Ростов на Дону">
+								<div>Ростов на Дону</div>
+							</div>
+							<div class="radio mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Нижний Новгород">
+								<div>Нижний Новгород</div>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-1 mt-2 mt-sm-3 mt-md-4 py-3 px-5 mx-auto">Ок</button>
 					</form>
 				</div>
 			</div>

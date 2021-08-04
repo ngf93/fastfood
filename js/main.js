@@ -1,6 +1,5 @@
 /* sticky header */
 if (window.matchMedia("(min-width: 768px)").matches) {
-  console.log(1);
   window.addEventListener('scroll', function() {
     let h_header = document.querySelector('header').offsetHeight;
     let st = window.pageYOffset;
@@ -64,4 +63,36 @@ function switchTo(btn){
 function moveInd(index){
   let shift = 'translateX('+index*100 +'%)';
   return shift;
+}
+
+
+/************  
+SEARCH / FILTER 
+*************/
+let arr_search = Array.from(document.querySelectorAll('.search-in-list'));
+arr_search.forEach(function(item, i, arr) {
+    item.addEventListener('keyup', (event) => {
+        listSearch(item);
+    });
+});
+function listSearch(elem) {
+    let phrase = elem.value.trim();
+    let arr = elem.nextElementSibling.querySelectorAll('.search-item');
+    let regPhrase = new RegExp(phrase, 'i');
+    if(phrase.length == 0){
+        for (let i = 0; i < arr.length; i++) {
+            arr[i].classList.remove('overlap');
+            arr[i].classList.remove('diff');
+        }
+    } else {
+        let flag = false;
+        for (let i = 0; i < arr.length; i++) {
+            flag = regPhrase.test(arr[i].innerHTML);
+            if (flag) {
+                arr[i].classList.add('overlap');
+            } else {
+                arr[i].classList.add('diff');
+            }
+        }
+    }
 }
