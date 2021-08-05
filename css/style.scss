@@ -182,6 +182,50 @@ select {
   }
 }
 
+.upload-file {
+  position: relative;
+  div {
+    position: relative;
+    z-index: 1;
+    line-height: 1.5em;
+    height: 1.5em;
+    font-weight: 500;
+    padding-left: 1.5em;
+    background: url(../img/icons/paperclip.svg) no-repeat left center;
+    background-size: 1em 1em;
+    &:empty::before {content: "Прикрепить файл";}
+  }
+  input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+  }
+}
+
+.rating {
+  svg {
+    height: 1em;
+    width: 1em;
+    fill: none;
+    path {
+      fill: none;
+      stroke: $orange;
+      stroke-width: 2px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    &.grade {
+      path {
+        stroke: $primary;
+        fill: $primary;
+      }
+    }
+  }
+}
 
 /* BUTTONS */
 button {
@@ -235,15 +279,56 @@ button {
     }
   }
 }
+.btn-icon {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  border: none;
+  padding: 0px;
+  position: absolute;
+  top: 1em;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.5em 1.5em;
+  transition: 250ms;
+  &.compare {
+    background-image: url(../img/icons/bar-chart.svg);
+    right: 1em;
+    @media (max-width: 767px) {
+      right: 0.7em;
+    }
+  }
+  &.favorite {
+    background-image: url(../img/icons/heart.svg);
+    right: 4.5em;
+    @media (max-width: 767px) {
+      right: 2.5em;
+    }
+  }
+  &[data-state="off"] {
+    background-color: $orange;
+  }
+  &[data-state="on"] {
+    background-color: $primary;
+    &.favorite {
+      background-image: url(../img/icons/heart2.svg);
+    }
+  }
+  @media (max-width: 767px) {
+    width: 1.5em;
+    height: 1.5em;
+    background-size: 1em 1em;
+    top: 0.7em;
+  }
+}
 
 /* TEXT STYLIZATION */
-h1, h2, h3, h5 {
-  font-family: $title-font;
-}
+h1, h2, h3, h5 {font-family: $title-font;}
 h1 {
-  font-size: 3em;
-  font-weight: 400;
   text-align: left;
+  font-size: 3em;
+  font-weight: 700;
   margin-bottom: 1em;
 }
 h2 {
@@ -292,6 +377,7 @@ h5 {
   h1, h2 {font-size: 1.2em;}
   h3, h4 {font-size: 1em;}
 }
+.title-font {font-family: $title-font;}
 .fs {
   &-09 {font-size: 0.8em;}
   &-11 {font-size: 1.1em;}
@@ -308,6 +394,7 @@ h5 {
 .fw {
   &-4 {font-weight: 400;}
   &-5 {font-weight: 500;}
+  &-6 {font-weight: 600;}
   &-7 {font-weight: 700;}
   &-9 {font-weight: 900;}
 }
@@ -353,6 +440,9 @@ body {
     right: 0px;
     max-width: 70%;
     z-index: -1;
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
   @media (max-width: 1659px) {
     font-size: 15px;
@@ -840,49 +930,6 @@ main {
       font-size: 10px;
     }
   }
-  .btn-icon {
-    width: 2.5em;
-    height: 2.5em;
-    border-radius: 50%;
-    border: none;
-    padding: 0px;
-    position: absolute;
-    top: 1em;
-    z-index: 10;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 1.5em 1.5em;
-    transition: 250ms;
-    &.compare {
-      background-image: url(../img/icons/bar-chart.svg);
-      right: 1em;
-      @media (max-width: 767px) {
-        right: 0.7em;
-      }
-    }
-    &.favorite {
-      background-image: url(../img/icons/heart.svg);
-      right: 4.5em;
-      @media (max-width: 767px) {
-        right: 2.5em;
-      }
-    }
-    &[data-state="off"] {
-      background-color: $orange;
-    }
-    &[data-state="on"] {
-      background-color: $primary;
-      &.favorite {
-        background-image: url(../img/icons/heart2.svg);
-      }
-    }
-    @media (max-width: 767px) {
-      width: 1.5em;
-      height: 1.5em;
-      background-size: 1em 1em;
-      top: 0.7em;
-    }
-  }
   .add-to-cart {
     position: relative;
     overflow: hidden;
@@ -1148,20 +1195,6 @@ main {
     svg {
       height: 1.375em;
       width: 1.375em;
-      fill: none;
-      path {
-        fill: none;
-        stroke: $orange;
-        stroke-width: 2px;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-      &.grade {
-        path {
-          stroke: $primary;
-          fill: $primary;
-        }
-      }
     }
   }
   @media (max-width: 1399px) {
@@ -1174,6 +1207,7 @@ main {
     padding: 1em;
   }
 }
+
 
 /* sec 7 */
 #sec-7 {
@@ -1211,12 +1245,44 @@ main {
 
 
 /* sec 9 */
+#sec-9 {
+  .fs-13 {
+    @media (max-width: 575px) {font-size: 1em;}
+  }
+}
+.vacancy-box {
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 767px) {
+      flex-wrap: nowrap;
+    }
+  }
+  @media (max-width: 767px) {
+    overflow: hidden;
+    padding: .75em 0 0 .75em;
+  }
+  @media (max-width: 575px) {
+    padding: .5em 0 0 .5em;
+  }
+}
 .vacancy-preview {
   background: #FFF;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-radius: 1.8em;
   padding: 1.5em;
   margin: 0 1.5em 1.5em 0;
+  width: fit-content;
+  @media (max-width: 991px) {
+    margin: 0 1em 1em 0;
+    padding: 1em;
+    border-radius: 1.5em;
+  }
+  @media (max-width: 575px) {
+    margin: 0 .5em .5em 0;
+    border-radius: 1em;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
   .title {
     font-weight: 500;
     font-size: 1.5em;
@@ -1224,6 +1290,69 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 300px;
+    @media (max-width: 767px) {font-size: 1.25em;}
+    @media (max-width: 575px) {font-size: 1em;}
+  }
+}
+
+/* sec 10 */
+#sec-10 {
+  p {
+    line-height: 1.5em;
+    margin-bottom: .75em;
+  }
+  ul {
+    padding-left: 0px;
+    list-style-type:"⦁  ";
+    line-height: 1.5em;
+    @media (max-width: 767px) {
+      padding-left: 1.5em;
+    }
+    li {margin-bottom: .5em;}
+  }
+  .skill {
+    background-color: #F2F2F2;
+    padding: .75em 1em;
+    border-radius: 2em;
+    margin: 0 1em 1em 0;
+  }
+  .vacancy-swiper {
+    overflow: hidden;
+    padding-top: 1em;
+    padding-left: 1em;
+    margin-left: -1em;
+  }
+  .fs-15 {
+    @media (max-width: 767px) {font-size: 1.25em;}
+    @media (max-width: 575px) {font-size: 1em;}
+  }
+  .fs-20 {
+    @media (max-width: 767px) {font-size: 1.5em;}
+    @media (max-width: 575px) {font-size: 1em;}
+  }
+}
+
+/* sec 11 */
+#sec-11 {
+  .dropdown-toggle {
+    &::after {content: unset;}
+  }
+  .dropdown-menu {
+    background-color: #4F4F4F;
+    color: #fff;
+    padding: 1em;
+    min-width: 250px;
+  }
+  .rating {
+    svg {
+      width: 2em;
+      height: 2em;
+    }
+  }
+  .switch {
+    &-option {
+      padding: 1em 0;
+    }
   }
 }
 

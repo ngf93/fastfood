@@ -71,3 +71,27 @@ var swiper4 = new Swiper('.swiper-about', {
     slidesPerView: 2,
     spaceBetween: 4,
 });
+
+
+if (window.matchMedia("(max-width: 767px)").matches) {
+    var swiper5 = new Swiper(".vacancy-box", {
+        slidesPerView: "auto",
+        spaceBetween: 8,
+        freeMode: true,
+        breakpoints: {
+            576: {
+                spaceBetween: 16,
+            }
+        }
+    });
+}
+var swiper6 = new Swiper(".vacancy-swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 8,
+    freeMode: true,
+    breakpoints: {
+        576: {
+            spaceBetween: 16,
+        }
+    }
+});

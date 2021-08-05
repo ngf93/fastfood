@@ -96,3 +96,22 @@ function listSearch(elem) {
         }
     }
 }
+
+/* input file */
+let arr_inputFile = Array.from(document.querySelectorAll('.upload-file input'));
+arr_inputFile.forEach(function(item, i, arr) {
+    item.addEventListener('input', (event) => {
+      processSelectedFiles(item);
+    });
+});
+function processSelectedFiles(fileInput) {
+  let output = fileInput.previousElementSibling;
+  let files = fileInput.files;
+  if (files.length==1){
+    output.innerHTML = files[0].name;
+  } else if (files.length==0) {
+    output.innerHTML = 'Прикрепить файл';
+  } else {
+    output.innerHTML = 'Выбрано файлов: '+files.length;
+  }
+}
