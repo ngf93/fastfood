@@ -2024,7 +2024,17 @@ main {
   background-color: #4F4F4F;
   color: #fff;
   padding: 1.5em;
-  min-width: 250px;
+  min-width: 275px;
+  border-radius: .625em;
+  margin-top: .8em !important;
+  position: relative;
+}
+
+#sec-11 .dropdown-menu::after {
+  content: url(../img/icons/triangle.svg);
+  position: absolute;
+  top: -.6em;
+  right: .6em;
 }
 
 #sec-11 .rating svg {
