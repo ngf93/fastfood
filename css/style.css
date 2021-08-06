@@ -112,6 +112,9 @@ select {
   margin-bottom: 1em;
   overflow: hidden;
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,7 +146,7 @@ select {
           flex-grow: 1;
   color: #828282;
   text-align: center;
-  padding: 0.5em 0;
+  padding: 0.5em .75em;
   pointer-events: auto;
   cursor: pointer;
 }
@@ -249,10 +252,23 @@ select {
   opacity: 0;
 }
 
+.rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .rating svg {
   height: 1em;
   width: 1em;
   fill: none;
+  margin-right: .5em;
 }
 
 .rating svg path {
@@ -667,12 +683,26 @@ body img.body-bg {
 }
 
 /* SLIDERS */
-.swiper-popular, .swiper-offers, .swiper-reviews, .swiper-about {
+.swiper-4, .swiper-offers, .swiper-reviews, .swiper-about {
   overflow: hidden;
 }
 
-.swiper-popular .swiper-slide, .swiper-offers .swiper-slide, .swiper-reviews .swiper-slide, .swiper-about .swiper-slide {
+.swiper-4 .swiper-slide, .swiper-offers .swiper-slide, .swiper-reviews .swiper-slide, .swiper-about .swiper-slide {
   padding: 4px;
+}
+
+.swiper-4, .swiper-reviews {
+  padding-bottom: 3em;
+}
+
+@media (max-width: 575px) {
+  .swiper-4, .swiper-reviews {
+    padding-bottom: 2em;
+  }
+}
+
+.swiper-reviews .swiper-slide {
+  height: unset;
 }
 
 @media (max-width: 767px) {
@@ -1307,16 +1337,6 @@ main {
           order: 3;
 }
 
-#sec-3 .swiper-popular {
-  padding-bottom: 3em;
-}
-
-@media (max-width: 575px) {
-  #sec-3 .swiper-popular {
-    padding-bottom: 2em;
-  }
-}
-
 /* product */
 .product-preview {
   position: relative;
@@ -1392,6 +1412,10 @@ main {
   .product-preview .ingredients {
     display: none;
   }
+}
+
+.product-preview .switch {
+  width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -1763,20 +1787,6 @@ main {
   background-position: left top, right bottom;
 }
 
-#sec-6 .swiper-reviews {
-  padding-bottom: 3em;
-}
-
-@media (max-width: 575px) {
-  #sec-6 .swiper-reviews {
-    padding-bottom: 2em;
-  }
-}
-
-#sec-6 .swiper-reviews .swiper-slide {
-  height: unset;
-}
-
 .review {
   background-color: #ffebcc;
   border-radius: 1.8em;
@@ -1800,8 +1810,7 @@ main {
 }
 
 .review .rating svg {
-  height: 1.375em;
-  width: 1.375em;
+  font-size: 1.375em;
 }
 
 @media (max-width: 1399px) {
@@ -2015,12 +2024,22 @@ main {
   }
 }
 
-/* sec 11 */
-#sec-11 .dropdown-toggle::after {
+/* sec 11 - product page */
+#sec-11 .short-info img.prod {
+  width: 100%;
+  height: 515px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  -webkit-filter: drop-shadow(0px 0px 7.92308px rgba(0, 0, 0, 0.05));
+          filter: drop-shadow(0px 0px 7.92308px rgba(0, 0, 0, 0.05));
+  border-radius: 1.5em;
+}
+
+#sec-11 .short-info .dropdown .dropdown-toggle::after {
   content: unset;
 }
 
-#sec-11 .dropdown-menu {
+#sec-11 .short-info .dropdown .dropdown-menu {
   background-color: #4F4F4F;
   color: #fff;
   padding: 1.5em;
@@ -2030,20 +2049,112 @@ main {
   position: relative;
 }
 
-#sec-11 .dropdown-menu::after {
+#sec-11 .short-info .dropdown .dropdown-menu::after {
   content: url(../img/icons/triangle.svg);
   position: absolute;
   top: -.6em;
   right: .6em;
 }
 
-#sec-11 .rating svg {
-  width: 2em;
-  height: 2em;
+#sec-11 .short-info .rating svg {
+  font-size: 2em;
 }
 
-#sec-11 .switch-option {
-  padding: 1em 0;
+#sec-11 .short-info .switch-option {
+  padding: 1em 1.5em;
+}
+
+#sec-11 .ingredient {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+}
+
+#sec-11 .ingredient img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: .5em;
+}
+
+#sec-11 .ingredient .title {
+  color: #4F4F4F;
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-bottom: .5em;
+}
+
+#sec-11 .ingredient button {
+  border: 1px solid #ff9900;
+  -webkit-box-shadow: 0px 0px 10px #ffcc80;
+          box-shadow: 0px 0px 10px #ffcc80;
+  padding: 0.6em 0;
+  width: 130px;
+  text-align: center;
+}
+
+#sec-11 .ingredient button[data-state="off"] {
+  color: #ff9900;
+  background-color: #fff;
+}
+
+#sec-11 .ingredient button[data-state="off"]::after {
+  content: "Добавить";
+}
+
+#sec-11 .ingredient button[data-state="on"] {
+  color: #fff;
+  background-color: #ff9900;
+}
+
+#sec-11 .ingredient button[data-state="on"]::after {
+  content: "Добавлено";
+}
+
+#sec-11 #desc p {
+  line-height: 1.5em;
+  margin-bottom: .75em;
+}
+
+#sec-11 #reviews .review {
+  background-color: transparent;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  padding: 0px;
+  margin-bottom: 2em;
+}
+
+.nav-tabs {
+  margin-bottom: 2em;
+  border-bottom: none;
+}
+
+.nav-tabs .nav-item:not(:last-child) {
+  margin-right: 1em;
+}
+
+.nav-tabs .nav-item .nav-link {
+  margin-bottom: 0px;
+  border-width: 0px 0px 1px 0px;
+  border-color: transparent;
+  padding: 0 .5em 0 0;
+  font-size: 2em;
+  color: #828282;
+  background-color: transparent;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  color: #ff9900;
+  border-color: #F2F2F2;
+  background-color: transparent;
+}
+
+.nav-tabs .nav-item .nav-link span {
+  color: #000;
+  font-size: .5em;
+  vertical-align: middle;
 }
 
 footer {
