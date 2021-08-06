@@ -379,7 +379,8 @@ h5 {
 }
 .title-font {font-family: $title-font;}
 .fs {
-  &-09 {font-size: 0.8em;}
+  &-08 {font-size: 0.8em;}
+  &-09 {font-size: 0.9em;}
   &-11 {font-size: 1.1em;}
   &-12 {font-size: 1.2em;}
   &-13 {font-size: 1.3em;}
@@ -1340,7 +1341,7 @@ main {
   .dropdown-menu {
     background-color: #4F4F4F;
     color: #fff;
-    padding: 1em;
+    padding: 1.5em;
     min-width: 250px;
   }
   .rating {

@@ -487,8 +487,12 @@ h5 {
   font-family: "Montserrat";
 }
 
-.fs-09 {
+.fs-08 {
   font-size: 0.8em;
+}
+
+.fs-09 {
+  font-size: 0.9em;
 }
 
 .fs-11 {
@@ -2019,7 +2023,7 @@ main {
 #sec-11 .dropdown-menu {
   background-color: #4F4F4F;
   color: #fff;
-  padding: 1em;
+  padding: 1.5em;
   min-width: 250px;
 }
 
