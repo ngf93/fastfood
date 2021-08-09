@@ -21,20 +21,23 @@
 					<li><a href="menu.html">Меню</a></li>
 					<li><a href="about.html">О нас</a></li>
 					<li><a href="delivery.html">Доставка и оплата</a></li>
-					<li><a href="#">Вакансии</a></li>
+					<li><a href="vacancies.html">Вакансии</a></li>
 					<li><a href="#">Избранное</a></li>
 				</ul>
 			</nav>
+			<a href="#">
+				<img src="img/icons/search2.svg">
+			</a>
 			<div class="d-none d-md-block">
 				<div class="mb-2">
 					<a href="tel:+79879877878" class="d-flex align-items-center">
 						<img src="img/icons/phone.svg" alt="телефон" class="me-2">
-						<span class="fw-5 fs-13">+7 (987) 987-78-78</span>
+						<span class="fw-5 fs-12">+7 (987) 987-78-78</span>
 					</a>
 				</div>
 				<div class="d-flex align-items-center">
 					<img src="img/icons/clock.svg" alt="время" class="me-2">
-					<span class="fw-5 fs-13">с 10:00 до 21:00</span>
+					<span class="fw-5 fs-12">с 10:00 до 21:00</span>
 				</div>
 			</div>
 			<div class="d-flex">
@@ -54,8 +57,7 @@
 							d="M15.9995 14.6666C18.9451 14.6666 21.3329 12.2788 21.3329 9.33327C21.3329 6.38775 18.9451 3.99994 15.9995 3.99994C13.054 3.99994 10.6662 6.38775 10.6662 9.33327C10.6662 12.2788 13.054 14.6666 15.9995 14.6666Z" />
 					</svg>
 				</button>
-				<div class="d-none d-md-block toggle-cart ms-3" onmouseover="toggleCart(this)"
-					onmouseout="toggleCart(this)">
+				<div class="d-none d-md-flex ms-3" id="toggle-cart">
 					<a href="" class="btn-icon btn-icon-dark">
 						<svg viewBox="0 0 33 32" xmlns="http://www.w3.org/2000/svg">
 							<path
@@ -468,7 +470,7 @@
 
 	<!-- Modal -->
 	<div class="modal fade" id="city" tabindex="-1" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
 			<div class="modal-content">
 				<button type="button" class="btn-close" data-bs-dismiss="modal">
 					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -482,35 +484,35 @@
 						<input type="search" placeholder="Начните ввод..." class="search-in-list mb-4">
 						<div class="search-list">
 							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Москва">
+								<input type="radio" name="city" value="Москва" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Москва</div>
 							</div>
 							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Санкт-Петербург">
+								<input type="radio" name="city" value="Санкт-Петербург" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Санкт-Петербург</div>
 							</div>
 							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Владивосток">
+								<input type="radio" name="city" value="Владивосток" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Владивосток</div>
 							</div>
 							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Самара">
+								<input type="radio" name="city" value="Самара" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Самара</div>
 							</div>
 							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Казань">
+								<input type="radio" name="city" value="Казань" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Казань</div>
 							</div>
 							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Ростов на Дону">
+								<input type="radio" name="city" value="Ростов на Дону" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Ростов на Дону</div>
 							</div>
 							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Нижний Новгород">
+								<input type="radio" name="city" value="Нижний Новгород" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Нижний Новгород</div>
 							</div>
 						</div>
-						<button type="submit" class="btn btn-1 mt-2 mt-sm-3 mt-md-4 py-3 px-5 mx-auto">Ок</button>
+						<button type="submit" disabled="disabled" class="verifiable-btn btn btn-1 mt-2 mt-sm-3 mt-md-4 py-3 px-5 mx-auto">Выбрать</button>
 					</form>
 				</div>
 			</div>

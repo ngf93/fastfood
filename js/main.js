@@ -11,11 +11,6 @@ if (window.matchMedia("(min-width: 768px)").matches) {
   });
 }
 
-
-function toggleCart(parent){
-  parent.querySelector('.cart-preview').style.display = (parent.querySelector('.cart-preview').style.display == 'block') ? 'none' : 'block'
-}
-
 /* compare and favorite buttons state */
 function toggleState(btn){
   btn.dataset.state = (btn.dataset.state == 'off') ? 'on' : 'off'
@@ -63,6 +58,40 @@ function switchTo(btn){
 function moveInd(index){
   let shift = 'translateX('+index*100 +'%)';
   return shift;
+}
+
+
+/* inputs verification if required & verifiable-btn activation/block */
+function verifyInput(form){
+  let requiredElems = Array.from(form.querySelectorAll('input[required]'));
+  if(requiredElems.length == 0){
+    return;
+  } else {
+    let flag = requiredElems.every(notNull);
+    if (flag){
+      console.log('все поля заполнены');
+      form.querySelector('.verifiable-btn').removeAttribute('disabled');
+    } else {
+      console.log('есть незаполненые поля');
+      form.querySelector('.verifiable-btn').setAttribute('disabled', 'disabled');
+    }
+  }
+
+  function notNull(element, index, array) {
+    if(element.type == 'radio' || element.type == 'checkbox'){
+      let name = element.name;
+      let arrBtns = Array.from(form.querySelectorAll('input[name="'+name+'"]'));
+      if(arrBtns.some(isChecked)){return element;}
+    } else if (element.type == 'text' && element.value.trim() != ''){
+      return element;
+    }
+  }
+
+  function isChecked(el){
+    if(el.checked && el.value.trim() != ''){
+      return el;
+    }
+  }
 }
 
 
@@ -115,3 +144,12 @@ function processSelectedFiles(fileInput) {
     output.innerHTML = 'Выбрано файлов: '+files.length;
   }
 }
+
+
+let cartPreview = document.getElementById('toggle-cart');
+cartPreview.addEventListener('mouseenter', (event) => {
+  cartPreview.querySelector('.cart-preview').style.display = 'block';
+});
+cartPreview.addEventListener('mouseleave', (event) => {
+  cartPreview.querySelector('.cart-preview').style.display = 'none';
+});
