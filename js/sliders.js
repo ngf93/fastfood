@@ -95,3 +95,9 @@ var swiper6 = new Swiper(".vacancy-swiper", {
         }
     }
 });
+
+var swiper7 = new Swiper(".soops", {
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    freeMode: true,
+});
