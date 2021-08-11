@@ -25,7 +25,7 @@
 					<li><a href="#">Избранное</a></li>
 				</ul>
 			</nav>
-			<a href="#">
+			<a href="search.html">
 				<img src="img/icons/search2.svg">
 			</a>
 			<div class="d-none d-md-block">
@@ -462,12 +462,11 @@
 				<img src="img/icons/close.svg" alt="">
 			</button>
 		</div>
-
 	</div>
 
 	<!-- Modal -->
 	<div class="modal fade" id="city" tabindex="-1" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
 			<div class="modal-content">
 				<button type="button" class="btn-close" data-bs-dismiss="modal">
 					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -480,36 +479,36 @@
 					<form action="">
 						<input type="search" placeholder="Начните ввод..." class="search-in-list mb-4">
 						<div class="search-list">
-							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Москва">
+							<div class="form-text mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Москва" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Москва</div>
 							</div>
-							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Санкт-Петербург">
+							<div class="form-text mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Санкт-Петербург" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Санкт-Петербург</div>
 							</div>
-							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Владивосток">
+							<div class="form-text mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Владивосток" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Владивосток</div>
 							</div>
-							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Самара">
+							<div class="form-text mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Самара" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Самара</div>
 							</div>
-							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Казань">
+							<div class="form-text mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Казань" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Казань</div>
 							</div>
-							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Ростов на Дону">
+							<div class="form-text mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Ростов на Дону" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Ростов на Дону</div>
 							</div>
-							<div class="radio mb-2 mb-sm-3 search-item">
-								<input type="radio" name="city" value="Нижний Новгород">
+							<div class="form-text mb-2 mb-sm-3 search-item">
+								<input type="radio" name="city" value="Нижний Новгород" required="" oninput="verifyInput(this.closest('form'));">
 								<div>Нижний Новгород</div>
 							</div>
 						</div>
-						<button type="submit" class="btn btn-1 mt-2 mt-sm-3 mt-md-4 py-3 px-5 mx-auto">Ок</button>
+						<button type="submit" disabled="disabled" class="verifiable-btn btn btn-1 mt-2 mt-sm-3 mt-md-4 py-3 px-5 mx-auto">Выбрать</button>
 					</form>
 				</div>
 			</div>
@@ -525,27 +524,90 @@
 					</svg>						
 				</button>
 				<div class="modal-body">
-					<h5 class="text-center">Вход</h5>
-					<div class="row justify-content-center">
-						<div class="col-md-7">
-							<form>
-								<div class="mb-2">Номер телефона</div>
-								<input type="text" placeholder="+7 000 000 00 00" value="+7" class="mb-3 mb-md-4">
-								<div class="mb-2">Пароль</div>
-								<div class="password mb-3 mb-md-4">
-									<input type="password" name="password" autocomplete="current-password" minlength="4" maxlength="8" placeholder="Начните ввод..." data-state="invisible">
-									<button type="button" data-state="invisible" class="pass_btn" onclick="change_state(this);"></button>
-								</div>
-								<button type="button" class="blue">Забыли пароль?</button>
-								<div class="row justify-content-center my-4 my-md-5">
-									<div class="col-8">
-										<button type="submit" class="btn btn-1 w-100 py-sm-3">Войти</button>
-									</div>
-								</div>
-								<div class="text-center d-flex flex-wrap justify-content-center align-items-center">У вас ещё нет учётной записи? <button type="button" class="blue ms-1" data-bs-toggle="modal" data-bs-target="#registration" data-bs-dismiss="modal">Регистрация</button></div>
-							</form>
+					<h5 class="text-center mb-4 mb-md-5">Вход</h5>
+					<form>
+						<div class="mb-2 mb-md-3">Номер телефона</div>
+						<input type="text" placeholder="+7 000 000 00 00" class="mb-3 mb-md-4">
+						<div class="mb-2 mb-md-3">Пароль</div>
+						<div class="password mb-3 mb-md-4">
+							<input type="password" name="password" autocomplete="current-password" minlength="4" maxlength="8" placeholder="Пароль" data-state="invisible">
+							<button type="button" data-state="invisible" class="pass_btn" onclick="change_state(this);"></button>
 						</div>
-					</div>
+						<div class="d-flex flex-column flex-sm-row align-items-center my-4 my-md-5">
+							<button type="submit" class="btn btn-1 px-5 py-sm-3 me-sm-3 me-md-4 mb-3 mb-sm-0">Войти</button>
+							<button type="button" class="blue" data-bs-toggle="modal" data-bs-target="#password-recovery-1" data-bs-dismiss="modal">Забыли пароль?</button>
+						</div>
+						<div class="d-flex flex-wrap align-items-center">
+							<span>У вас ещё нет учётной записи?</span>
+							<button type="button" class="blue ms-1" data-bs-toggle="modal" data-bs-target="#registration" data-bs-dismiss="modal">Регистрация</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="password-recovery-1" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal">
+					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18 6L6 18"/>
+						<path d="M6 6L18 18"/>
+					</svg>						
+				</button>
+				<div class="modal-body">
+					<h5 class="text-center">Восстановление пароля</h5>
+					<div class="text-center mb-3 mb-md-5">Введите номер телефона, на который вы регистрировались.</div>
+					<form>
+						<input type="text" placeholder="+7 000 000 00 00" class="mb-3 mb-md-5">
+						<button type="submit" data-bs-toggle="modal" data-bs-target="#password-recovery-2" data-bs-dismiss="modal" class="btn btn-1 py-sm-3 mb-3 mb-md-4">Выслать код</button>
+						<button type="button" class="blue ms-1" data-bs-toggle="modal" data-bs-target="#entrance" data-bs-dismiss="modal">Я вспомнил пароль</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="password-recovery-2" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal">
+					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18 6L6 18"/>
+						<path d="M6 6L18 18"/>
+					</svg>						
+				</button>
+				<div class="modal-body">
+					<h5 class="text-center">Восстановление пароля</h5>
+					<div class="text-center mb-3 mb-md-5">На номер +7 (987) 897-67-67 выслано СМС-сообщение с кодом подтверждения.</div>
+					<form>
+						<input type="text" placeholder="Код подтверждения" class="mb-3 mb-md-5">
+						<button type="submit" data-bs-toggle="modal" data-bs-target="#password-recovery-3" data-bs-dismiss="modal" class="btn btn-1 py-sm-3 mb-3 mb-md-4">Подтвердить</button>
+						<button type="button" class="blue ms-1" data-bs-toggle="modal" data-bs-target="#entrance" data-bs-dismiss="modal">Я вспомнил пароль</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="password-recovery-3" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal">
+					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18 6L6 18"/>
+						<path d="M6 6L18 18"/>
+					</svg>						
+				</button>
+				<div class="modal-body">
+					<h5 class="text-center mb-5">Восстановление пароля</h5>
+					<form>
+						<div class="mb-2 mb-md-3">Новый пароль</div>
+						<div class="password mb-4 mb-md-5">
+							<input type="password" name="password" autocomplete="current-password" minlength="4" maxlength="8" placeholder="Пароль" data-state="invisible">
+							<button type="button" data-state="invisible" class="pass_btn" onclick="change_state(this);"></button>
+						</div>
+						<button type="submit" class="btn btn-1 py-sm-3 mb-3 mb-md-4">Далее</button>
+						<button type="button" class="blue ms-1" data-bs-toggle="modal" data-bs-target="#entrance" data-bs-dismiss="modal">Я вспомнил пароль</button>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -560,21 +622,16 @@
 					</svg>						
 				</button>
 				<div class="modal-body">
-					<h5 class="text-center">Регистрация</h5>
-					<div class="row justify-content-center">
-						<div class="col-md-7">
-							<form>
-								<div class="mb-2">Номер телефона</div>
-								<input type="text" placeholder="+7 000 000 00 00" value="+7">
-								<div class="row justify-content-center my-4 my-md-5">
-									<div class="col-8">
-										<button type="submit" class="btn btn-1 w-100 py-sm-3">Войти</button>
-									</div>
-								</div>
-								<div class="text-center d-flex flex-wrap justify-content-center align-items-center">У вас уже есть учётная запись? <button type="button" class="blue ms-1" data-bs-toggle="modal" data-bs-target="#entrance" data-bs-dismiss="modal">Вход</button></div>
-							</form>
+					<h5 class="text-center mb-4 mb-md-5">Регистрация</h5>
+					<form>
+						<div class="mb-2 mb-md-3">Номер телефона</div>
+						<input type="text" placeholder="+7 000 000 00 00" class="mb-3 mb-md-5">
+						<button type="submit" data-bs-toggle="modal" data-bs-target="#confirmation" data-bs-dismiss="modal" class="btn btn-1 py-sm-3 mb-4 mb-md-5">Выслать код</button>
+						<div class="d-flex flex-wrap align-items-center">
+							<span>У вас уже есть учётная запись?</span>
+							<button type="button" class="blue ms-1" data-bs-toggle="modal" data-bs-target="#entrance" data-bs-dismiss="modal">Вход</button>
 						</div>
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -590,21 +647,41 @@
 				</button>
 				<div class="modal-body">
 					<h5 class="text-center">Подтвердите номер телефона</h5>
-					<div class="row justify-content-center">
-						<div class="col-md-7">
-							<div class="text-center mb-3 mb-md-4">На ваш номер телефона +7 (987) 897-67-67 выслано СМС-сообщение с кодом подтверждения.</div>
-							<form>
-								<div class="mb-2">Код подтверждения</div>
-								<input type="text" placeholder="Начните ввод...">
-								<div class="row justify-content-center my-4 my-md-5">
-									<div class="col-8">
-										<button type="submit" class="btn btn-1 w-100 py-sm-3">Войти</button>
-									</div>
-								</div>
-								<div class="text-center d-flex flex-wrap justify-content-center align-items-center">У вас уже есть учётная запись? <button type="button" class="blue ms-1" data-bs-toggle="modal" data-bs-target="#entrance" data-bs-dismiss="modal">Вход</button></div>
-							</form>
+					<div class="text-center mb-3 mb-md-5">На номер +7 (987) 897-67-67 выслано СМС-сообщение с кодом подтверждения.</div>
+					<form>
+						<input type="text" placeholder="Код подтверждения" class="mb-4 mb-md-5">
+						<button type="submit" data-bs-toggle="modal" data-bs-target="#pick-password" data-bs-dismiss="modal" class="btn btn-1 py-sm-3 mb-4 mb-md-5">Подтвердить</button>
+						<div class="d-flex flex-wrap align-items-center">
+							<span>У вас уже есть учётная запись?</span> 
+							<button type="button" class="blue ms-1" data-bs-toggle="modal" data-bs-target="#entrance" data-bs-dismiss="modal">Вход</button>
 						</div>
-					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="pick-password" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal">
+					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18 6L6 18"/>
+						<path d="M6 6L18 18"/>
+					</svg>						
+				</button>
+				<div class="modal-body">
+					<h5 class="text-center">Придумайте пароль</h5>
+					<form>
+						<div class="password mb-4 mb-md-5">
+							<input type="password" name="password" autocomplete="current-password" minlength="4" maxlength="8" placeholder="Пароль" data-state="invisible">
+							<button type="button" data-state="invisible" class="pass_btn" onclick="change_state(this);"></button>
+						</div>
+						<button type="submit" class="btn btn-1 py-sm-3 mb-4 mb-md-5">Регистрация</button>
+						<div class="d-flex flex-wrap align-items-center">
+							<span>У вас уже есть учётная запись?</span>
+							<button type="button" class="blue ms-1" data-bs-toggle="modal" data-bs-target="#entrance" data-bs-dismiss="modal">Вход</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
