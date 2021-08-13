@@ -16,6 +16,16 @@ function toggleState(btn){
   btn.dataset.state = (btn.dataset.state == 'off') ? 'on' : 'off'
 }
 
+/* add to cart */
+function addToCart(btn){
+  btn.previousElementSibling.style.top='0%';
+}
+function checkValue(btn){
+  if(btn.nextElementSibling.value == 1){
+    btn.parentElement.style.top='-100%';
+  }
+}
+
 /* password button state change */
 function change_state(btn) {
   if(btn.dataset.state == 'invisible'){
@@ -100,7 +110,7 @@ SEARCH / FILTER
 *************/
 let arr_search = Array.from(document.querySelectorAll('.search-in-list'));
 arr_search.forEach(function(item, i, arr) {
-    item.addEventListener('keyup', (event) => {
+    item.addEventListener('input', (event) => {
         listSearch(item);
     });
 });
@@ -118,9 +128,11 @@ function listSearch(elem) {
         for (let i = 0; i < arr.length; i++) {
             flag = regPhrase.test(arr[i].innerHTML);
             if (flag) {
-                arr[i].classList.add('overlap');
+              arr[i].classList.remove('diff');
+              arr[i].classList.add('overlap');
             } else {
-                arr[i].classList.add('diff');
+              arr[i].classList.remove('overlap');
+              arr[i].classList.add('diff');
             }
         }
     }

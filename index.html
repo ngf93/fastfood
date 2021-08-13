@@ -24,10 +24,10 @@
 					<li><a href="about.html">О нас</a></li>
 					<li><a href="delivery.html">Доставка и оплата</a></li>
 					<li><a href="vacancies.html">Вакансии</a></li>
-					<li><a href="#">Избранное</a></li>
+					<li><a href="favorites.html">Избранное</a></li>
 				</ul>
 			</nav>
-			<a href="search.html">
+			<a class="d-none d-md-block" href="search.html">
 				<img src="img/icons/search2.svg">
 			</a>
 			<div class="d-none d-md-block">
@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="d-flex">
-				<a href="" class="d-none d-md-flex btn-icon btn-icon-dark">
+				<a href="comparing.html" class="d-none d-md-flex btn-icon btn-icon-dark">
 					<svg viewBox="0 0 31 32" xmlns="http://www.w3.org/2000/svg">
 						<path d="M15.5005 26.2917V13.4271" />
 						<path d="M23.2192 26.2917V5.70834" />
@@ -159,7 +159,13 @@
 						</div>
 					</div>
 				</div>
-				<a href="" class="d-flex d-md-none btn-icon btn-icon-dark">
+				<a class="d-flex d-md-none btn-icon btn-icon-dark" href="search.html">
+					<svg viewBox="0 0 32 33" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14.6667 25.8333C20.5577 25.8333 25.3333 21.0577 25.3333 15.1667C25.3333 9.27563 20.5577 4.5 14.6667 4.5C8.77563 4.5 4 9.27563 4 15.1667C4 21.0577 8.77563 25.8333 14.6667 25.8333Z"/>
+						<path d="M28 28.5L22.2 22.7"/>
+					</svg>						
+				</a>
+				<a href="" class="d-flex d-md-none btn-icon btn-icon-dark ms-3">
 					<svg viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M7.25 2.91663L3.625 7.74996V24.6666C3.625 25.3076 3.87961 25.9223 4.33283 26.3755C4.78604 26.8287 5.40073 27.0833 6.04167 27.0833H22.9583C23.5993 27.0833 24.214 26.8287 24.6672 26.3755C25.1204 25.9223 25.375 25.3076 25.375 24.6666V7.74996L21.75 2.91663H7.25Z" />
@@ -253,7 +259,18 @@
 
 		<section id="sec-2" class="mb-8">
 			<div class="container">
-				<h2>Наше меню</h2>
+				<div class="d-flex justify-content-between mb-4 mb-md-5">
+					<h2 class="mb-0">Наше меню</h2>
+					<button type="button" class="btn-svg ms-4">
+						<svg viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.4766 3H3.47656V10H10.4766V3Z"></path>
+							<path d="M21.4766 3H14.4766V10H21.4766V3Z"></path>
+							<path d="M21.4766 14H14.4766V21H21.4766V14Z"></path>
+							<path d="M10.4766 14H3.47656V21H10.4766V14Z"></path>
+						</svg>														
+					</button>
+				</div>
+				
 				<div class="row row-cols-2 row-cols-sm-3 row-cols-xl-4 gx-2 gy-3 g-md-4">
 					<div>
 						<div class="categorie">
@@ -1025,11 +1042,14 @@
 							</button>
 							<nav class="d-none d-lg-block">
 								<ul>
+									<li><a href="">Акции</a></li>
 									<li><a href="">Полуфабрикаты</a></li>
 									<li><a href="">Напитки</a></li>
 									<li><a href="about.html">О нас</a></li>
 									<li><a href="delivery.html">Доставка и оплата</a></li>
 									<li><a href="vacancies.html">Вакансии</a></li>
+									<li><a href="">Бронь столика</a></li>
+									<li><a href="">Банкеты</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -1037,8 +1057,7 @@
 				</div>
 				<div class="col-4 col-xl-3 text-center d-flex flex-column justify-content-between">
 					<div class="mb-3 mb-lg-0">
-						<a href="#" class="d-block mb-2 mb-lg-4"><img src="img/logo.svg" alt="Название сайта"
-								class="img-fluid"></a>
+						<a href="#" class="d-block mb-2 mb-lg-4"><img src="img/logo.svg" alt="Название сайта" class="img-fluid"></a>
 						<div><a href="#" class="primary">Политика конфиденциальности</a></div>
 					</div>
 					<div>
@@ -1092,7 +1111,7 @@
 				<path d="M8 22V12H16V22" />
 			</svg>
 		</a>
-		<a href="" class="link">
+		<a href="search.html" class="link">
 			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 				<path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" />
 				<path d="M21 20.9999L16.65 16.6499" />
@@ -1147,22 +1166,28 @@
 							Меню
 						</a>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="#">
 							<img src="img/icons/favorites.svg" alt="Избранное" class="icon me-2">
 							Избранное
 						</a>
-					</li>
-					<li class="d-block d-md-none">
+					</li> -->
+					<!-- <li class="d-block d-md-none">
 						<a href="#">
 							<img src="img/icons/bar-chart2.svg" alt="Сравнение" class="icon me-2">
 							Сравнение
 						</a>
-					</li>
+					</li> -->
 					<li>
 						<a href="delivery.html">
 							<img src="img/icons/delivery.svg" alt="Доставка и оплата" class="icon me-2">
 							Доставка и оплата
+						</a>
+					</li>
+					<li>
+						<a href="about.html">
+							<img src="img/icons/offers.svg" alt="Акции" class="icon me-2">
+							Акции
 						</a>
 					</li>
 					<li>
@@ -1175,6 +1200,18 @@
 						<a href="vacancies.html">
 							<img src="img/icons/vacancy.svg" alt="Вакансии" class="icon me-2">
 							Вакансии
+						</a>
+					</li>
+					<li>
+						<a href="vacancies.html">
+							<img src="img/icons/reservation.svg" alt="Бронь столика" class="icon me-2">
+							Бронь столика
+						</a>
+					</li>
+					<li>
+						<a href="vacancies.html">
+							<img src="img/icons/banquets.svg" alt="Банкеты" class="icon me-2">
+							Банкеты
 						</a>
 					</li>
 				</ul>
