@@ -6,7 +6,10 @@ var swiper1 = new Swiper('.swiper-4', {
         el: '.swiper-pagination',
         type: 'bullets',
     },
-    navigation: false,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
     breakpoints: {
         576: {
             slidesPerView: 3,
@@ -15,10 +18,6 @@ var swiper1 = new Swiper('.swiper-4', {
         768: {
             slidesPerView: 3,
             spaceBetween: 16,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
         },
         1200: {
             slidesPerView: 4,
@@ -59,7 +58,6 @@ var swiper3 = new Swiper('.swiper-reviews', {
             slidesPerView: 2,
             spaceBetween: 16,
         },
-        // when window width is >= 992px
         992: {
             slidesPerView: 3,
             spaceBetween: 16,
@@ -72,32 +70,14 @@ var swiper4 = new Swiper('.swiper-about', {
     spaceBetween: 4,
 });
 
-
-// if (window.matchMedia("(max-width: 767px)").matches) {
-//     var swiper5 = new Swiper(".vacancy-box", {
-//         slidesPerView: "auto",
-//         spaceBetween: 8,
-//         freeMode: true,
-//         breakpoints: {
-//             576: {
-//                 spaceBetween: 16,
-//             }
-//         }
-//     });
-// }
-// var swiper6 = new Swiper(".vacancy-swiper", {
-//     slidesPerView: "auto",
-//     spaceBetween: 8,
-//     freeMode: true,
-//     breakpoints: {
-//         576: {
-//             spaceBetween: 16,
-//         }
-//     }
-// });
-
-var swiper7 = new Swiper(".soops", {
+var swiper5 = new Swiper(".soops", {
     slidesPerView: "auto",
     spaceBetween: 0,
+    freeMode: true,
+});
+
+var swiper6 = new Swiper(".subcategories", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
     freeMode: true,
 });

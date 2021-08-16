@@ -159,12 +159,6 @@
 						</div>
 					</div>
 				</div>
-				<a class="d-flex d-md-none btn-icon btn-icon-dark" href="search.html">
-					<svg viewBox="0 0 32 33" xmlns="http://www.w3.org/2000/svg">
-						<path d="M14.6667 25.8333C20.5577 25.8333 25.3333 21.0577 25.3333 15.1667C25.3333 9.27563 20.5577 4.5 14.6667 4.5C8.77563 4.5 4 9.27563 4 15.1667C4 21.0577 8.77563 25.8333 14.6667 25.8333Z"/>
-						<path d="M28 28.5L22.2 22.7"/>
-					</svg>						
-				</a>
 				<a href="" class="d-flex d-md-none btn-icon btn-icon-dark ms-3">
 					<svg viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -374,16 +368,18 @@
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="product-preview">
-									<a href="">
-										<img src="img/products/margarita.png" alt="">
-										<h5>Пицца «Маргарита»</h5>
-									</a>
-									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
-									<div class="switch">
-										<div class="indicator"></div>
-										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
-										<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
-										<button type="button" class="switch-option" onclick="switchTo(this);">35 см</button>
+									<div>
+										<a href="product.html">
+											<img src="img/products/margarita.png" alt="">
+											<h5>Пицца «Маргарита»</h5>
+										</a>
+										<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
+										<div class="switch">
+											<div class="indicator"></div>
+											<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+											<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
+											<button type="button" class="switch-option" onclick="switchTo(this);">35 см</button>
+										</div>
 									</div>
 									<div class="d-md-flex justify-content-between align-items-center">
 										<div class="price d-flex flex-row flex-md-column align-items-center align-items-md-start justify-content-between mb-2 mb-md-0">
@@ -412,15 +408,17 @@
 							</div>
 							<div class="swiper-slide">
 								<div class="product-preview">
-									<a href="">
-										<img src="img/products/margarita.png" alt="">
-										<h5>Пицца «Фрутти ди Маро»</h5>
-									</a>
-									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
-									<div class="switch">
-										<div class="indicator"></div>
-										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
-										<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
+									<div>
+										<a href="product.html">
+											<img src="img/products/margarita.png" alt="">
+											<h5>Пицца «Фрутти ди Маро»</h5>
+										</a>
+										<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
+										<div class="switch">
+											<div class="indicator"></div>
+											<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+											<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
+										</div>
 									</div>
 									<div class="d-md-flex justify-content-between align-items-center">
 										<div class="price d-flex flex-row flex-md-column align-items-center align-items-md-start justify-content-between mb-2 mb-md-0">
@@ -449,16 +447,50 @@
 							</div>
 							<div class="swiper-slide">
 								<div class="product-preview">
-									<a href="">
-										<img src="img/products/margarita.png" alt="">
-										<h5>Пицца «Маргарита»</h5>
-									</a>
-									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
-									<div class="switch">
-										<div class="indicator"></div>
-										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
-										<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
-										<button type="button" class="switch-option" onclick="switchTo(this);">35 см</button>
+									<div>
+										<a href="product.html">
+											<img src="img/products/filadelfia.png" alt="">
+											<h5>Ролл «Филадельфия»</h5>
+										</a>
+										<div class="ingredients">лосось, сливочный сыр, огурец, рис, нори</div>
+									</div>
+									<div class="d-md-flex justify-content-between align-items-center">
+										<div class="price d-flex flex-row flex-md-column align-items-center align-items-md-start justify-content-between mb-2 mb-md-0">
+											<div class="primary">400 грамм</div>
+											<div class="d-flex flex-wrap flex-row-reverse flex-md-row align-items-center">
+												<span class="fw-5 fs-15 align-middle">300 ₽</span>
+											</div>
+										</div>
+										<div class="add-to-cart">
+											<div class="add-count">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/minus2.svg" alt="">
+												</button>
+												<input type="number" placeholder="0" value="1">
+												<button class="btn-mini" type="button">
+													<img src="img/icons/plus2.svg" alt="">
+												</button>
+											</div>
+											<button type="button" class="add-prod" onclick="this.previousElementSibling.style.marginTop='0';">Добавить</button>
+										</div>
+									</div>
+									<button type="button" class="btn-icon compare" data-state="on" onclick="toggleState(this);"></button>
+									<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="product-preview">
+									<div>
+										<a href="product.html">
+											<img src="img/products/margarita.png" alt="">
+											<h5>Пицца «Фрутти ди Маро»</h5>
+										</a>
+										<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
+										<div class="switch">
+											<div class="indicator"></div>
+											<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+											<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
+										</div>
 									</div>
 									<div class="d-md-flex justify-content-between align-items-center">
 										<div class="price d-flex flex-row flex-md-column align-items-center align-items-md-start justify-content-between mb-2 mb-md-0">
@@ -487,15 +519,18 @@
 							</div>
 							<div class="swiper-slide">
 								<div class="product-preview">
-									<a href="">
-										<img src="img/products/margarita.png" alt="">
-										<h5>Пицца «Фрутти ди Маро»</h5>
-									</a>
-									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
-									<div class="switch">
-										<div class="indicator"></div>
-										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
-										<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
+									<div>
+										<a href="product.html">
+											<img src="img/products/margarita.png" alt="">
+											<h5>Пицца «Маргарита»</h5>
+										</a>
+										<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
+										<div class="switch">
+											<div class="indicator"></div>
+											<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+											<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
+											<button type="button" class="switch-option" onclick="switchTo(this);">35 см</button>
+										</div>
 									</div>
 									<div class="d-md-flex justify-content-between align-items-center">
 										<div class="price d-flex flex-row flex-md-column align-items-center align-items-md-start justify-content-between mb-2 mb-md-0">
@@ -524,53 +559,17 @@
 							</div>
 							<div class="swiper-slide">
 								<div class="product-preview">
-									<a href="">
-										<img src="img/products/margarita.png" alt="">
-										<h5>Пицца «Маргарита»</h5>
-									</a>
-									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
-									<div class="switch">
-										<div class="indicator"></div>
-										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
-										<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
-										<button type="button" class="switch-option" onclick="switchTo(this);">35 см</button>
-									</div>
-									<div class="d-md-flex justify-content-between align-items-center">
-										<div class="price d-flex flex-row flex-md-column align-items-center align-items-md-start justify-content-between mb-2 mb-md-0">
-											<div class="primary">400 грамм</div>
-											<div class="d-flex flex-wrap flex-row-reverse flex-md-row align-items-center">
-												<span class="fw-5 fs-15 align-middle">300 ₽</span>
-												<span class="gray text-decoration-line-through align-middle me-1 me-md-0 ms-1">500 ₽</span>
-											</div>
+									<div>
+										<a href="product.html">
+											<img src="img/products/margarita.png" alt="">
+											<h5>Пицца «Фрутти ди Маро»</h5>
+										</a>
+										<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
+										<div class="switch">
+											<div class="indicator"></div>
+											<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
+											<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
 										</div>
-										<div class="add-to-cart">
-											<div class="add-count">
-												<button class="btn-mini" type="button">
-													<img src="img/icons/minus2.svg" alt="">
-												</button>
-												<input type="number" placeholder="0" value="1">
-												<button class="btn-mini" type="button">
-													<img src="img/icons/plus2.svg" alt="">
-												</button>
-											</div>
-											<button type="button" class="add-prod" onclick="this.previousElementSibling.style.marginTop='0';">Добавить</button>
-										</div>
-									</div>
-									<button type="button" class="btn-icon compare" data-state="on" onclick="toggleState(this);"></button>
-									<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="product-preview">
-									<a href="">
-										<img src="img/products/margarita.png" alt="">
-										<h5>Пицца «Фрутти ди Маро»</h5>
-									</a>
-									<div class="ingredients">Тесто, томатный соус, сыр, томаты, базилик, орегано</div>
-									<div class="switch">
-										<div class="indicator"></div>
-										<button type="button" class="switch-option" onclick="switchTo(this);">25 см</button>
-										<button type="button" class="switch-option active" onclick="switchTo(this);">30 см</button>
 									</div>
 									<div class="d-md-flex justify-content-between align-items-center">
 										<div class="price d-flex flex-row flex-md-column align-items-center align-items-md-start justify-content-between mb-2 mb-md-0">

@@ -165,3 +165,18 @@ cartPreview.addEventListener('mouseenter', (event) => {
 cartPreview.addEventListener('mouseleave', (event) => {
   cartPreview.querySelector('.cart-preview').style.display = 'none';
 });
+
+
+/* sticky header */
+if (window.matchMedia("(max-width: 767px)").matches) {
+  let page = document.querySelector('.search-page');
+  page.addEventListener('scroll', function() {
+    let height = page.querySelector('.soops').offsetTop;
+    let st = page.scrollTop;
+    if (st > height) {
+      document.getElementById('search-head').classList.add("sticky");
+    } else {
+      document.getElementById('search-head').classList.remove("sticky");
+    }
+  });
+}
