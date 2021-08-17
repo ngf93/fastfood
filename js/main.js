@@ -167,11 +167,11 @@ cartPreview.addEventListener('mouseleave', (event) => {
 });
 
 
-/* sticky header */
+/* sticky search */
 if (window.matchMedia("(max-width: 767px)").matches) {
   let page = document.querySelector('.search-page');
   page.addEventListener('scroll', function() {
-    let height = page.querySelector('.soops').offsetTop;
+    let height = document.getElementById('fixing-anchor').offsetTop;
     let st = page.scrollTop;
     if (st > height) {
       document.getElementById('search-head').classList.add("sticky");

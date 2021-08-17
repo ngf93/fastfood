@@ -132,7 +132,7 @@ input[type="search"]::-webkit-search-results-decoration {
 input,
 textarea {
   background: #ffffff;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #E0E0E0;
   border-radius: 0.625em;
   padding: 0.85em;
   width: 100%;
@@ -143,11 +143,15 @@ textarea {
 
 input:not(:placeholder-shown),
 textarea:not(:placeholder-shown) {
-  border: 1px solid #e0e0e0;
+  border: 1px solid #BDBDBD;
 }
 
-input:hover, input:focus,
-textarea:hover,
+input:hover,
+textarea:hover {
+  border: 1px solid #828282;
+}
+
+input:focus,
 textarea:focus {
   border: 1px solid #ffcc80;
 }
@@ -175,6 +179,7 @@ input[type="radio"] {
   background-color: transparent;
   background: url(../img/icons/radio.svg) no-repeat center;
   background-size: contain;
+  padding: 0px;
 }
 
 input[type="radio"]:checked {
@@ -251,12 +256,21 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #E0E0E0;
   border-radius: 0.625em;
-  padding: 0.8em 2.5em 0.8em 0.8em;
+  padding: 0.85em 2.5em 0.85em 0.8em;
   width: 100%;
+  line-height: normal;
   background: url(../img/icons/chevron-down-2.svg) no-repeat calc(100% - 1em) center #fff;
   background-size: 1.5em 1em;
+}
+
+select:hover {
+  border: 1px solid #828282;
+}
+
+select:focus {
+  border: 1px solid #ffcc80;
 }
 
 .switch {
@@ -465,7 +479,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 2.5em;
-  padding: 0.6em 2em;
+  padding: 0.9em 2em;
   text-align: center;
   font-weight: 500;
   font-size: 1em;
@@ -495,7 +509,7 @@ button {
 
 .btn-1:active {
   color: #fff;
-  background: #222121;
+  background: #E38800;
   border: 1px solid #e38800;
   -webkit-box-shadow: 0px 0px 10px #ffcc80;
           box-shadow: 0px 0px 10px #ffcc80;
@@ -843,8 +857,16 @@ h5 {
   color: #828282;
 }
 
+.gray-4 {
+  color: #BDBDBD;
+}
+
 .blue {
   color: #2d9cdb;
+}
+
+.red {
+  color: #EB5757;
 }
 
 .dark-orange {
@@ -2630,6 +2652,61 @@ main {
   color: #000;
   font-size: 0.5em;
   vertical-align: middle;
+}
+
+/* personal account */
+#pa nav {
+  border-radius: .6em;
+  border: 1px solid #F2F2F2;
+  overflow: hidden;
+}
+
+#pa nav ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+#pa nav ul li:not(:first-child) {
+  border-top: 1px solid #F2F2F2;
+}
+
+#pa nav ul li a, #pa nav ul li button {
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em;
+  background-color: #fff;
+  color: #333333;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+#pa nav ul li a:hover, #pa nav ul li a:focus, #pa nav ul li button:hover, #pa nav ul li button:focus {
+  color: #be5b26;
+}
+
+#pa nav ul li a:active, #pa nav ul li a.active, #pa nav ul li button:active, #pa nav ul li button.active {
+  color: #fff;
+  background-color: #ffcc80;
+}
+
+#pa nav ul li a.note::after, #pa nav ul li button.note::after {
+  content: "●";
+  color: #ff9900;
+  float: right;
+}
+
+#pa nav ul li:last-child a, #pa nav ul li:last-child button {
+  color: #ff9900;
+}
+
+#pa nav ul li:last-child a:hover, #pa nav ul li:last-child a:focus, #pa nav ul li:last-child button:hover, #pa nav ul li:last-child button:focus {
+  color: #be5b26;
+}
+
+#pa nav ul li:last-child a:active, #pa nav ul li:last-child a.active, #pa nav ul li:last-child button:active, #pa nav ul li:last-child button.active {
+  color: #fff;
+  background-color: #ffcc80;
 }
 
 footer {

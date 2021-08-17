@@ -10,6 +10,7 @@ $gray-3: #828282;
 $gray-4: #BDBDBD;
 $gray-5: #E0E0E0;
 $gray-6: #F2F2F2;
+$red: #EB5757;
 
 
 a,
@@ -146,16 +147,18 @@ input[type="search"]::-webkit-search-results-decoration {
 input,
 textarea {
   background: #ffffff;
-  border: 1px solid #bdbdbd;
+  border: 1px solid $gray-5;
   border-radius: 0.625em;
   padding: 0.85em;
   width: 100%;
   line-height: normal;
   box-shadow: unset;
   &:not(:placeholder-shown) {
-    border: 1px solid #e0e0e0;
+    border: 1px solid $gray-4;
   }
-  &:hover,
+  &:hover {
+    border: 1px solid $gray-3;
+  }
   &:focus {
     border: 1px solid $orange;
   }
@@ -184,6 +187,7 @@ input {
     background-color: transparent;
     background: url(../img/icons/radio.svg) no-repeat center;
     background-size: contain;
+    padding: 0px;
     &:checked {
       background: url(../img/icons/radio-ch.svg) no-repeat center;
       background-size: contain;
@@ -244,13 +248,19 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
-  border: 1px solid #bdbdbd;
+  border: 1px solid $gray-5;
   border-radius: 0.625em;
-  padding: 0.8em 2.5em 0.8em 0.8em;
+  padding: 0.85em 2.5em 0.85em 0.8em;
   width: 100%;
-  background: url(../img/icons/chevron-down-2.svg) no-repeat calc(100% - 1em)
-    center #fff;
+  line-height: normal;
+  background: url(../img/icons/chevron-down-2.svg) no-repeat calc(100% - 1em) center #fff;
   background-size: 1.5em 1em;
+  &:hover {
+    border: 1px solid $gray-3;
+  }
+  &:focus {
+    border: 1px solid $orange;
+  }
 }
 
 .switch {
@@ -407,7 +417,7 @@ button {
 .btn {
   @include flex-center;
   border-radius: 2.5em;
-  padding: 0.6em 2em;
+  padding: 0.9em 2em;
   text-align: center;
   font-weight: 500;
   font-size: 1em;
@@ -428,7 +438,7 @@ button {
     }
     &:active {
       color: #fff;
-      background: #222121;
+      background: #E38800;
       border: 1px solid #e38800;
       box-shadow: 0px 0px 10px $orange;
     }
@@ -705,9 +715,12 @@ h5 {
 .gray-1 {color: $gray-1;}
 .gray-2 {color: $gray-2;}
 .gray-3 {color: $gray-3;}
+.gray-4 {color: $gray-4;}
 .blue {color: #2d9cdb;}
+.red {color: $red;}
 .dark-orange {color: $dark-orange;}
 .primary {color: $primary;}
+
 .bb-dash {border-bottom: 1px dashed $primary;}
 
 .mb-8 {
@@ -1980,6 +1993,61 @@ main {
         color: #000;
         font-size: 0.5em;
         vertical-align: middle;
+      }
+    }
+  }
+}
+
+
+/* personal account */
+#pa {
+  nav {
+    border-radius: .6em;
+    border: 1px solid $gray-6;
+    overflow: hidden;
+    ul {
+      list-style: none;
+      padding-left: 0px;
+      li {
+        &:not(:first-child){
+          border-top: 1px solid $gray-6;
+        }
+        a, button {
+          display: block;
+          text-align: left;
+          width: 100%;
+          padding: 1em;
+          background-color: #fff;
+          color: $gray-1;
+          font-weight: 500;
+          line-height: 1.5em;
+          &:hover, &:focus {
+            color: $dark-orange;
+          }
+          &:active, &.active {
+            color: #fff;
+            background-color: $orange;
+          }
+          &.note{
+            &::after {
+              content: "●";
+              color: $primary;
+              float: right;
+            }
+          }
+        }
+        &:last-child {
+          a, button {
+            color: $primary;
+            &:hover, &:focus {
+              color: $dark-orange;
+            }
+            &:active, &.active {
+              color: #fff;
+              background-color: $orange;
+            }
+          }
+        }
       }
     }
   }
