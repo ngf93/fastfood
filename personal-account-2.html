@@ -212,7 +212,7 @@
 									<a href="personal-account-2.html" class="active">Адрес доставки</a>
 								</li>
 								<li>
-									<a href="">Бонусы</a>
+									<a href="personal-account-3.html">Бонусы</a>
 								</li>
 								<li>
 									<a href="">Способы оплаты</a>
@@ -238,7 +238,7 @@
 					<!-- content -->
 					<div class="col-md-8 col-lg-9 col-xxl-8">
 						<div class="row">
-							<div class="col-lg-7">
+							<div class="col-lg-9 col-xl-7">
 								<!-- 1 stage -->
 								<form action="" class="mb-4 mb-sm-5">
 									<h5 class="gray-1">Адрес доставки</h5>
@@ -252,12 +252,44 @@
 								<!-- 2 stage -->
 								<form action="" class="mb-4 mb-sm-5">
 									<h5 class="gray-1">Адрес доставки</h5>
-									<div class="fs-09 gray-1 mb-4">Добавьте адрес для доставки по умолчанию.</div>
-									<button type="button" class="d-flex align-items-center">
-										<img src="img/icons/plus3.svg" alt="Добавить" class="me-2">
-										<span class="primary">Добавить адрес</span>
-									</button>
-									<button type="submit" class="btn btn-2 my-5">Сохранить</button>
+									<div class="gray-1 mb-2">Название адреса</div>
+									<input type="text" placeholder="Например, Работа" class="mb-3">
+									<div class="gray-1 mb-2">Город</div>
+									<input type="text" placeholder="Казань" class="mb-3">
+									<div class="gray-1 mb-2">Район</div>
+									<select class="mb-3">
+										<option value="" selected disabled class="gray-4">Выберите район</option>
+										<option value="Район 1">Район 1</option>
+										<option value="Район 2">Район 2</option>
+										<option value="Район 3">Район 3</option>
+									</select>
+									<div class="gray-1 mb-2">Улица</div>
+									<input type="text" placeholder="Улица" class="mb-3">
+									<div class="row row-cols-2 row-cols-sm-3 gx-2 gx-md-4">
+										<div>
+											<div class="gray-1 mb-2">Дом</div>
+											<input type="text" placeholder="Дом" class="mb-4">
+										</div>
+										<div>
+											<div class="gray-1 mb-2">Этаж</div>
+											<input type="text" placeholder="Этаж" class="mb-4">
+										</div>
+										<div>
+											<div class="gray-1 mb-2">Квартира</div>
+											<input type="text" placeholder="Квартира" class="mb-4">
+										</div>
+									</div>
+									<div class="row row-cols-2 gx-2 gx-md-4">
+										<div>
+											<div class="gray-1 mb-2">Подъезд</div>
+											<input type="text" placeholder="Подъезд" class="mb-4">
+										</div>
+										<div>
+											<div class="gray-1 mb-2">Код двери</div>
+											<input type="text" placeholder="Код двери" class="mb-4">
+										</div>
+									</div>
+									<button type="submit" class="btn btn-2">Сохранить</button>
 								</form>
 
 								<!-- 3 stage -->
