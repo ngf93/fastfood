@@ -81,3 +81,18 @@ var swiper6 = new Swiper(".subcategories", {
     spaceBetween: 20,
     freeMode: true,
 });
+
+var swiper7 = new Swiper(".swiper-gallery", {
+    slidesPerView: "auto",
+    spaceBetween: 16,
+    freeMode: true,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
+    breakpoints: {
+        992: {
+            spaceBetween: 24,
+        }
+    }
+});
