@@ -806,7 +806,8 @@ body {
 .swiper-4,
 .swiper-offers,
 .swiper-reviews,
-.swiper-about {
+.swiper-about,
+.swiper-6 {
   overflow: hidden;
   .swiper-slide {
     padding: 4px;
@@ -818,6 +819,11 @@ body {
   @media (max-width: 575px) {
     padding-bottom: 2em;
   }
+  .swiper-slide {
+    height: unset;
+  }
+}
+.swiper-6 {
   .swiper-slide {
     height: unset;
   }
@@ -933,7 +939,7 @@ header {
           width: 0.8em;
           height: 1em;
           path {
-            fill: #333333;
+            fill: $gray-1;
           }
         }
         &:hover,
@@ -1944,44 +1950,6 @@ main {
       }
     }
   }
-  .ingredient {
-    background: #ffffff;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-    padding: 1em;
-    img {
-      width: 100%;
-      height: 150px;
-      object-fit: contain;
-      margin-bottom: 0.5em;
-    }
-    .title {
-      color: #4f4f4f;
-      font-weight: 500;
-      font-size: 1.2em;
-      margin-bottom: 0.5em;
-    }
-    button {
-      border: 1px solid $primary;
-      box-shadow: 0px 0px 10px $orange;
-      padding: 0.6em 0;
-      width: 130px;
-      text-align: center;
-      &[data-state="off"] {
-        color: $primary;
-        background-color: #fff;
-        &::after {
-          content: "Добавить";
-        }
-      }
-      &[data-state="on"] {
-        color: #fff;
-        background-color: $primary;
-        &::after {
-          content: "Добавлено";
-        }
-      }
-    }
-  }
   #desc {
     p {
       line-height: 1.5em;
@@ -1994,6 +1962,60 @@ main {
       box-shadow: unset;
       padding: 0px;
       margin-bottom: 2em;
+    }
+  }
+}
+.ingredient {
+  background: #ffffff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  @media (max-width: 575px){
+    padding: .5em;
+  }
+  img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 0.5em;
+    @media (max-width: 575px){
+      height: 30vw;
+    }
+  }
+  .title {
+    color: #4f4f4f;
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-bottom: 0px;
+    @media (max-width: 767px){font-size: 1em;}
+  }
+  button {
+    border: 1px solid $primary;
+    box-shadow: 0px 0px 10px $orange;
+    padding: 0.6em 0;
+    width: 130px;
+    text-align: center;
+    @media (max-width: 575px){
+      width: 100%;
+      padding: 0.3em 0;
+      margin-top: .5em;
+    }
+    &[data-state="off"] {
+      color: $primary;
+      background-color: #fff;
+      &::after {
+        content: "Добавить";
+      }
+    }
+    &[data-state="on"] {
+      color: #fff;
+      background-color: $primary;
+      &::after {
+        content: "Добавлено";
+      }
     }
   }
 }
@@ -2341,6 +2363,189 @@ main {
         }
       }
     }
+  }
+}
+
+/* shopping-cart */
+#shopping-cart {
+  .item {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1.5em;
+    background: #FFF;
+    box-shadow: 0px 0px 8px rgba(179, 179, 179, 0.3);
+    border-radius: .5em;
+    padding: 1em;
+    @media (max-width: 1199px){grid-gap: 1em;}
+    @media (max-width: 767px){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 575px){
+      font-size: 14px;
+      grid-gap: .5em;
+      padding: .5em;
+      .fs-15, .fs-12 {font-size: 1em;}
+    }
+    .img {
+      grid-column: 1/3;
+      grid-row: 1/2;
+      position: relative;
+      @media (max-width: 767px){
+        grid-column: 1/2;
+      }
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        @media (max-width: 1399px){height: 150px;}
+        @media (max-width: 575px){height: 28vw;}
+      }
+      .btn-icon {
+        position: absolute;
+        top: 0px;
+        &.compare {
+          right: 1em;
+          @media (max-width: 575px){right: 0px;}
+        }
+        &.favorite {
+          right: 4em;
+          @media (max-width: 575px){right: 2em;}
+        }
+      }
+    }
+    .text {
+      grid-column: 3/6;
+      grid-row: 1/2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      padding-right: 1em;
+      @media (max-width: 1199px){padding-right: 0px;}
+      @media (max-width: 767px){
+        grid-column: 2/4;
+      }
+      h5 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 0.5em;
+      }
+      .ingredients {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.3em;
+        height: 2.6em;
+        margin-bottom: 1em;
+        @media (max-width: 575px){margin-bottom: .5em;}
+      }
+    }
+    .btns {
+      grid-column: 6/9;
+      grid-row: 1/2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 2em;
+      @media (max-width: 1199px){
+        padding-right: 0px;
+        font-size: 12px;
+      }
+      @media (max-width: 767px){
+        grid-column: 2/4;
+        grid-row: 2/3;
+      }
+      @media (max-width: 575px){
+        font-size: 16px;
+      }
+      .input-box {
+        @include flex-center();
+        background-color: $gray-6;
+        border-radius: 2em;
+        padding: .75em 1em;
+        width: fit-content;
+        @media (max-width: 575px){padding: .5em;}
+        input {
+          padding: 0px;
+          background-color: transparent;
+          border: none;
+          width: 50px;
+          text-align: center;
+        }
+        button {
+          @include flex-center();
+          width: 1.5em;
+          height: 1.5em;
+          @media (max-width: 575px){
+            width: 1em;
+            height: 1em;
+          }
+          svg {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            path {
+              stroke: $gray-1;
+              stroke-width: 2.67px;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+            }
+          }
+        }
+      }
+      .btn-del {
+        @include flex-center();
+        width: 1.5em;
+        height: 1.5em;
+        @media (max-width: 575px){
+          width: 1em;
+          height: 1em;
+        }
+        svg {
+          width: 1em;
+          height: 1.25em;
+          fill: none;
+          path {
+            fill: $gray-2;
+          }
+        }
+      }
+    }
+  }
+  .bonus {
+    background: #FFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    border-radius: .5em;
+    padding: 0 3em;
+    margin-bottom: 1.5em;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @media (max-width: 1399px){height: 150px;}
+    @media (max-width: 1199px){padding: 0 2em;}
+    @media (max-width: 575px){
+      padding: 0 1em;
+      .lh-15 {line-height: normal;}
+    }
+    &.food {
+      padding: 0 1em 0 0;
+      img {
+        width: 130px;
+        height: 100%;
+        object-fit: cover;
+        object-position: right center;
+        margin-right: 1em;
+        @media (max-width: 575px){
+          width: 90px;
+          margin-right: .5em;
+        }
+      }
+    }
+    &>div {flex: 1;}
   }
 }
 

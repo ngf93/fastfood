@@ -1,4 +1,4 @@
-var swiper1 = new Swiper('.swiper-4', {
+const swiper1 = new Swiper('.swiper-4', {
     slidesPerView: 2,
     spaceBetween: 4,
     loop: false,
@@ -26,7 +26,7 @@ var swiper1 = new Swiper('.swiper-4', {
     }
 });
   
-var swiper2 = new Swiper('.swiper-offers', {
+const swiper2 = new Swiper('.swiper-offers', {
     slidesPerView: 2,
     spaceBetween: 4,
     breakpoints: {
@@ -42,7 +42,7 @@ var swiper2 = new Swiper('.swiper-offers', {
     }
 });
 
-var swiper3 = new Swiper('.swiper-reviews', {
+const swiper3 = new Swiper('.swiper-reviews', {
     slidesPerView: 1,
     spaceBetween: 0,
     pagination: {
@@ -65,24 +65,24 @@ var swiper3 = new Swiper('.swiper-reviews', {
     }
 });
 
-var swiper4 = new Swiper('.swiper-about', {
+const swiper4 = new Swiper('.swiper-about', {
     slidesPerView: 2,
     spaceBetween: 4,
 });
 
-var swiper5 = new Swiper(".soops", {
+const swiper5 = new Swiper(".soops", {
     slidesPerView: "auto",
     spaceBetween: 0,
     freeMode: true,
 });
 
-var swiper6 = new Swiper(".subcategories", {
+const swiper6 = new Swiper(".subcategories", {
     slidesPerView: "auto",
     spaceBetween: 20,
     freeMode: true,
 });
 
-var swiper7 = new Swiper(".swiper-gallery", {
+const swiper7 = new Swiper(".swiper-gallery", {
     slidesPerView: "auto",
     spaceBetween: 16,
     freeMode: true,
@@ -93,6 +93,32 @@ var swiper7 = new Swiper(".swiper-gallery", {
     breakpoints: {
         992: {
             spaceBetween: 24,
+        }
+    }
+});
+
+const swiper8 = new Swiper(".swiper-6", {
+    slidesPerView: 2,
+    spaceBetween: 4,
+    freeMode: true,
+    breakpoints: {
+        576: {
+            spaceBetween: 16,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 4,
+        },
+        1200: {
+            slidesPerView: 5,
+        },
+        1400: {
+            spaceBetween: 24,
+        },
+        1660: {
+            slidesPerView: 6,
         }
     }
 });
