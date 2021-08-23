@@ -34,6 +34,7 @@ blockquote,
 cite,
 figure,
 figcaption,
+table,
 ul,
 ol,
 dl {
@@ -80,6 +81,12 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@mixin box {
+  background: #FFF;
+  box-shadow: 0px 0px 8px rgba(179, 179, 179, 0.3);
+  border-radius: .5em;
+  padding: 1.5em;
 }
 
 /* FORMS CUSTOMIZATION */
@@ -192,6 +199,24 @@ input {
     &:checked {
       background: url(../img/icons/radio-ch.svg) no-repeat center;
       background-size: contain;
+    }
+  }
+  &[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    border: none;
+    width: 1.3em;
+    height: 1.3em;
+    background-color: transparent;
+    background: url(../img/icons/mark.svg) no-repeat center;
+    background-size: auto;
+    background-color: $gray-4;
+    padding: 0px;
+    border-radius: .25em;
+    &:checked {
+      background-color: $primary;
     }
   }
 }
@@ -727,6 +752,7 @@ h5 {
 
 .bb-dash {border-bottom: 1px dashed $primary;}
 .lh-15 {line-height: 1.5em;}
+.box {@include box();}
 
 .mb-8 {
   margin-bottom: 8em;
@@ -2508,6 +2534,10 @@ main {
           width: 1em;
           height: 1.25em;
           fill: none;
+          @media (max-width: 575px){
+            width: .75em;
+            height: 1em;
+          }
           path {
             fill: $gray-2;
           }
