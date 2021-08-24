@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Личный кабинет</title>
+	<title>Оформление заказа</title>
 	<!-- <link rel="shortcut icon" href="images/favicon.png" type="image/png"> -->
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
@@ -192,131 +192,178 @@
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb mb-0">
 					<li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-					<li class="breadcrumb-item"><a href="personal-account.html">Личный кабинет</a></li>
+					<li class="breadcrumb-item"><a href="checkout.html">Оформление заказа</a></li>
 				</ol>
 			</nav>
 		</div>
 
-		<section id="sec-13" class="mb-8">
+		<section id="sec-15" class="mb-8">
 			<div class="container">
-				<h1 class="d-none d-md-block">Личный кабинет</h1>
-				<div class="row justify-content-between">
-					<!-- navigation -->
-					<div class="col-md-4 col-lg-3">
-						<nav>
-							<ul>
-								<li>
-									<a href="personal-account.html">Личные данные</a>
-								</li>
-								<li>
-									<a href="personal-account-2.html">Адрес доставки</a>
-								</li>
-								<li>
-									<a href="personal-account-3.html">Бонусы</a>
-								</li>
-								<li>
-									<a href="personal-account-4.html">Способы оплаты</a>
-								</li>
-								<li>
-									<a href="personal-account-5.html" class="active">История заказов</a>
-								</li>
-								<li>
-									<a href="personal-account-6.html" class="note">Уведомления</a>
-								</li>
-								<li>
-									<a href="personal-account-7.html">Условия использования</a>
-								</li>
-								<li>
-									<a href="personal-account-8.html">Чат с поддержкой</a>
-								</li>
-								<li>
-									<button type="button" data-bs-toggle="modal" data-bs-target="#account-exit">Выйти</button>
-								</li>
-							</ul>
-						</nav>
-					</div>
-					<!-- content -->
-					<div class="col-md-8 col-lg-9 col-xxl-8">
-						<!-- if empty -->
-						<h5>История заказов</h5>
-						<div class="row">
-							<div class="col-md-6 col-xl-4">
-								<img src="img/icons/history.svg" alt="История заказов" class="mx-auto mb-3 d-block img-fluid">
-								<div class="gray-2 text-center mb-4">У вас пока не было ни одного заказа. Добавляйте товары и оформите свой первый заказ.</div>
-								<a href="menu.html" class="btn btn-2 mx-auto mb-5">В каталог</a>
-							</div>
-						</div>
+				<form action="">
+					<h1>Оформление</h1>
+					<div class="row">
+						<div class="col-md-7 col-xl-6">
+							<div class="row">
+								<div class="col-sm-10 col-xxl-8">
+									<fieldset>
+										<legend class="gray-1 fs-12 fw-5 mb-4">Контактные данные</legend>
+										<div class="gray-1 mb-3">Имя</div>
+										<input type="text" placeholder="Имя" value="Аркадий" class="mb-3">
+										<div class="gray-1 mb-3">Телефон</div>
+										<input type="text" placeholder="Номер телефона" value="+7 (987) 987-78-78" class="mb-3">
+									</fieldset>
+								</div>
+								<div class="col-12 col-xxl-10">
+									<div class="d-flex fs-15 mt-5 mb-4">
+										<a href="checkout-delivery-registrated.html" class="primary fw-5">Доставка</a>
+										<a href="checkout-pickup-registrated.html" class="ms-3 ms-sm-5 fw-5">Самовывоз</a>
+									</div>
+									<fieldset class="mb-5">
+										<div class="fs-12 fw-5 gray-1 mb-2">Адрес доставки</div>
+										<div class="fs-09 gray-1 mb-4">Выберите адрес для доставки</div>
+										<div class="d-flex align-items-start mb-4">
+											<input type="radio" name="address" value="Адрес Работа" id="address-1" checked="">
+											<div class="ms-2">
+												<label for="address-1" class="gray-1 fw-5">Адрес Работа</label>
+												<div class="d-flex mt-2">
+													<button type="button" class="fs-09 gray-1 me-3">Редактировать</button>
+													<button type="button" class="fs-09 gray-4">Удалить</button>
+												</div>
+											</div>
+										</div>
+										<div class="d-flex align-items-start mb-4">
+											<input type="radio" name="address" value="Адрес Котельная" id="address-2">
+											<div class="ms-2">
+												<label for="address-2" class="gray-1 fw-5">Адрес Котельная</label>
+												<div class="d-flex mt-2">
+													<button type="button" class="fs-09 gray-1 me-3">Редактировать</button>
+													<button type="button" class="fs-09 gray-4">Удалить</button>
+												</div>
+											</div>
+										</div>
+										<a href="checkout-delivery-registrated-2.html" class="d-flex align-items-center mb-5">
+											<img src="img/icons/plus3.svg" alt="Добавить" class="me-2">
+											<span class="primary">Добавить адрес</span>
+										</a>
 
-						<!-- with orders -->
-						<h5>История заказов</h5>
-						<div class="order-history mt-4 mt-lg-5">
-							<div class="head">
-								<div>Состав</div>
-								<div>Адрес доставки</div>
-								<div>Дата заказа</div>
-								<div>Сумма</div>
-							</div>
-							<div class="body">
-								<div class="order">
-									<div>
-										<div class="gray-1 fw-5">Заказ № 67</div>
-										<div class="gray-2 mt-2">Пицца «Маргарита»</div>
-									</div>
-									<div>
-										<div class="gray-1 fw-5">Самовывоз</div>
-										<div class="gray-2 mt-2">ТЦ Олимп, ул. Бутлерова, 30</div>
-									</div>
-									<div>
-										<div class="gray-1">23.09.2021</div>
-									</div>
-									<div>
-										<div class="gray-1 fw-5">3 800 ₽</div>
-									</div>
+										<div class="gray-1 fs-12 fw-5 mb-4">Время доставки</div>
+										<input type="time" value="12:00" class="mb-3">
+										<div class="gray-1 mb-2">Комментарий</div>
+										<textarea rows="5" placeholder="Комментарий к заказу">Злой консерьеж, заедает звонок, лучше стучите!</textarea>
+									</fieldset>
 								</div>
-								<div class="order">
-									<div>
-										<div class="gray-1 fw-5">Заказ 23</div>
-										<div class="gray-2 mt-2">Пицца «Маргарита»</div>
-										<div class="gray-2 mt-2">Пицца «Фрутти ди Маро»</div>
-										<div class="gray-2 mt-2">Пицца «Маргарита»</div>
-									</div>
-									<div>
-										<div class="gray-1 fw-5">Доставка</div>
-										<div class="gray-2 mt-2">г. Казань, Вахитовский р-н, ул. Большая Красная, д. 48, кв. 7</div>
-									</div>
-									<div>
-										<div class="gray-1">18.09.2021</div>
-									</div>
-									<div>
-										<div class="gray-1 fw-5">1 200 ₽</div>
-									</div>
-								</div>
-								<div class="order">
-									<div>
-										<div class="gray-1 fw-5">Заказ № 1</div>
-										<div class="gray-2 mt-2">Пицца «Маргарита»</div>
-										<div class="gray-2 mt-2">Пицца «Фрутти ди Маро»</div>
-									</div>
-									<div>
-										<div class="gray-1 fw-5">Самовывоз</div>
-										<div class="gray-2 mt-2">Парк Хаус, пр-т. Хусаина Ямашева</div>
-									</div>
-									<div>
-										<div class="gray-1">12.09.2021</div>
-									</div>
-									<div>
-										<div class="gray-1 fw-5">900 ₽</div>
+								<div class="col-sm-8 col-xxl-6">
+									<fieldset class="mb-5">
+										<legend class="gray-1 fs-15 fw-5 mb-4">Способ оплаты:</legend>
+										<div class="box">
+											<div class="d-flex align-items-center mb-3">
+												<input type="radio" name="payment" value="Наличными курьеру" id="courier-cash" checked="">
+												<label for="courier-cash" class="ms-2">Наличными курьеру</label>
+											</div>
+											<div class="d-flex align-items-center mb-3">
+												<input type="radio" name="payment" value="Картой курьеру" id="courier-card">
+												<label for="courier-card" class="ms-2">Картой курьеру</label>
+											</div>
+											<div class="d-flex align-items-center mb-3">
+												<input type="radio" name="payment" value="Онлайн картой" id="online-card">
+												<label for="online-card" class="ms-2">
+													<div>Онлайн картой</div>
+													<div class="gray-3">**** **** **** 7685</div>
+												</label>
+											</div>
+											<div class="d-flex align-items-center">
+												<input type="radio" name="payment" value="Apple Pay/ Google Pay" id="a-g-pay">
+												<label for="a-g-pay" class="ms-2">Apple Pay/ Google Pay</label>
+											</div>
+										</div>
+									</fieldset>
+									<div class="d-flex align-items-center mb-5">
+										<input type="checkbox" id="pay-with-bonus" checked>
+										<label for="pay-with-bonus" class="ms-2">Оплатить заказ бонусными баллами</label>
 									</div>
 								</div>
 							</div>
 						</div>
-								
-						<a href="" class="gray-3 d-flex align-items-center d-md-none mt-5">
-							<img src="img/icons/chevron-left.svg" alt="Вернуться назад" class="me-1">	
-							Вернуться назад
-						</a>
+						<div class="col-md-5 col-xl-4 col-xxl-3 offset-xl-1 position-relative mb-5 mb-md-0">
+							<div class="box outcome">
+								<div class="gray-1 fw-5 fs-12 mb-3 ps-2">Ваш заказ:</div>
+								<div class="table-resposive">
+									<table class="table table-borderless mb-0">
+										<tbody>
+											<tr>
+												<td>
+													<div class="primary">Пицца «Фрутти ди Маро»</div>
+													<div class="gray-3">3 шт</div>
+												</td>
+												<td>
+													<div class="fw-5 text-end">900 ₽</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="gray-2">Пицца «Фрутти ди Маро»</div>
+													<div class="gray-3">1 шт</div>
+												</td>
+												<td>
+													<div class="fw-5 text-end">300 ₽</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="gray-2">Пицца «Даром»</div>
+													<div class="gray-3">1 шт</div>
+												</td>
+												<td>
+													<div class="fw-5 text-end">0 ₽</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="gray-1 fw-5 fs-12">Всего:</div>
+												</td>
+												<td>
+													<div class="gray-1 fw-5 fs-12 text-end">900 ₽</div>
+												</td>
+											</tr>
+										</tbody>
+										
+									</table>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
+					<div class="row mb-5">
+						<div class="col-md-5 col-xl-4 col-xxl-3">
+							<div class="table-resposive">
+								<table class="table table-borderless fw-5 mb-0">
+									<tbody>
+										<tr>
+											<td class="gray-1">Доставка:</td>
+											<td class="text-end primary">Бесплатно</td>
+										</tr>
+										<tr>
+											<td class="gray-1">Оплачено баллами:</td>
+											<td class="text-end primary">15 ₽</td>
+										</tr>
+										<tr>
+											<td class="gray-1">Заработаете:</td>
+											<td class="text-end primary">10 баллов</td>
+										</tr>
+										<tr class="fs-15">
+											<td class="gray-1">Всего:</td>
+											<td class="text-end primary">1 200 ₽</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-1 mb-5">Оформить заказ на 1 200 ₽</button>
+					<a href="shopping-cart.html" class="gray-3 d-flex align-items-center">
+						<img src="img/icons/chevron-left.svg" alt="Вернуться назад" class="me-1">	
+						Вернуться в корзину
+					</a>
+				</form>
 			</div>
 		</section>
 	</main>
@@ -332,8 +379,7 @@
 								<span class="me-3">Каталог</span>
 								<svg width="10" height="6" viewBox="0 0 10 6" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
-									<path d="M0.999878 0.999939L4.99988 4.99994L8.99988 0.999939" stroke="#fff"
-										stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M0.999878 0.999939L4.99988 4.99994L8.99988 0.999939" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 								</svg>
 							</button>
 							<nav class="d-none d-lg-block">
@@ -750,54 +796,6 @@
 							<button type="button" class="blue ms-1" data-bs-toggle="modal" data-bs-target="#entrance" data-bs-dismiss="modal">Вход</button>
 						</div>
 					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="modal fade" id="account-exit" tabindex="-1" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-			<div class="modal-content">
-				<button type="button" class="btn-close" data-bs-dismiss="modal">
-					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M18 6L6 18"/>
-						<path d="M6 6L18 18"/>
-					</svg>						
-				</button>
-				<div class="modal-body">
-					<div class="row justify-content-center">
-						<div class="col-md-8">
-							<h5 class="text-center">Вы точно хотите выйти?</h5>
-							<div class="text-center gray-3 mb-4">Не забудьте сохранить данные для входа</div>
-							<div class="d-flex justify-content-center align-items-center">
-								<button type="button" class="btn btn-2 px-5">Да</button>
-								<button type="button" data-bs-dismiss="modal" class="gray-2 ms-4">Остаться</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="modal fade" id="account-delete" tabindex="-1" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-			<div class="modal-content">
-				<button type="button" class="btn-close" data-bs-dismiss="modal">
-					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M18 6L6 18"/>
-						<path d="M6 6L18 18"/>
-					</svg>						
-				</button>
-				<div class="modal-body">
-					<div class="row justify-content-center">
-						<div class="col-md-9">
-							<h5 class="text-center">Удаление аккаунта</h5>
-							<div class="text-center gray-3 mb-4">Все ваши данные, история заказов, бонусы и скидки будут утеряны.</div>
-							<div class="d-flex justify-content-center align-items-center">
-								<button type="button" class="btn btn-2 px-5">Удалить</button>
-								<button type="button" data-bs-dismiss="modal" class="gray-2 ms-4">Отменить</button>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>

@@ -197,71 +197,71 @@
 			</nav>
 		</div>
 
-		<section class="mb-8">
+		<section id="sec-15" class="mb-8">
 			<div class="container">
 				<form action="">
 					<h1>Оформление</h1>
 					<div class="row">
-						<div class="col-6">
+						<div class="col-md-7 col-xl-6">
 							<div class="row">
-								<div class="col-8">
+								<div class="col-sm-10 col-xxl-8">
 									<fieldset>
 										<legend class="gray-1 fs-12 fw-5 mb-4">Контактные данные</legend>
 										<div class="gray-1 mb-3">Имя</div>
-										<input type="text" placeholder="Имя" class="mb-3">
+										<input type="text" placeholder="Имя" value="Аркадий" class="mb-3">
 										<div class="gray-1 mb-3">Телефон</div>
-										<input type="text" placeholder="Номер телефона" class="mb-3">
+										<input type="text" placeholder="Номер телефона" value="+7 (987) 987-78-78" class="mb-3">
 									</fieldset>
 								</div>
-								<div class="col-10">
+								<div class="col-12 col-xxl-10">
 									<div class="d-flex fs-15 mt-5 mb-4">
-										<button type="button" class="primary fw-5">Доставка</button>
-										<button type="button" class="ms-5 fw-5">Самовывоз</button>
+										<a href="checkout-delivery-registrated.html" class="primary fw-5">Доставка</a>
+										<a href="checkout-pickup-registrated.html" class="ms-3 ms-sm-5 fw-5">Самовывоз</a>
 									</div>
 									<fieldset class="mb-5">
 										<div class="gray-1 mb-3">Город</div>
-										<input type="text" placeholder="Город" class="mb-3">
+										<input type="text" placeholder="Город" value="Казань" class="mb-3">
 										<div class="gray-1 mb-2">Район</div>
 										<select class="mb-3">
-											<option value="" selected disabled class="gray-4">Выберите район</option>
-											<option value="Район 1">Район 1</option>
+											<option value="" disabled class="gray-4">Выберите район</option>
+											<option value="Район 1Приволжский р-он" selected>Приволжский р-он</option>
 											<option value="Район 2">Район 2</option>
 											<option value="Район 3">Район 3</option>
 										</select>
 										<div class="gray-1 mb-2">Улица</div>
-										<input type="text" placeholder="Улица" class="mb-3">
-										<div class="row row-cols-2 row-cols-sm-3 gx-2 gx-md-4">
+										<input type="text" placeholder="Улица" value="Большая Красная" class="mb-3">
+										<div class="row row-cols-1 row-cols-sm-3 gx-2 gx-md-4">
 											<div>
 												<div class="gray-1 mb-2">Дом</div>
-												<input type="text" placeholder="Дом" class="mb-4">
+												<input type="text" placeholder="Дом" value="48" class="mb-4">
 											</div>
 											<div>
 												<div class="gray-1 mb-2">Этаж</div>
-												<input type="text" placeholder="Этаж" class="mb-4">
+												<input type="text" placeholder="Этаж" value="3" class="mb-4">
 											</div>
 											<div>
 												<div class="gray-1 mb-2">Квартира</div>
-												<input type="text" placeholder="Квартира" class="mb-4">
+												<input type="text" placeholder="Квартира" value="15" class="mb-4">
 											</div>
 										</div>
 										<div class="row row-cols-2 gx-2 gx-md-4">
 											<div>
 												<div class="gray-1 mb-2">Подъезд</div>
-												<input type="text" placeholder="Подъезд" class="mb-4">
+												<input type="text" placeholder="Подъезд" value="1" class="mb-4">
 											</div>
 											<div>
 												<div class="gray-1 mb-2">Код двери</div>
-												<input type="text" placeholder="Код двери" class="mb-4">
+												<input type="text" placeholder="Код двери" value="12345" class="mb-4">
 											</div>
 										</div>
+										<a href="checkout-delivery-registrated.html" class="btn btn-2 mb-4">Сохранить</a>
 										<div class="gray-1 fs-12 fw-5 mb-4">Время доставки</div>
-										<input type="time" class="mb-3">
-										<input type="date" class="mb-3">
+										<input type="time" value="12:00" class="mb-3">
 										<div class="gray-1 mb-2">Комментарий</div>
-										<textarea rows="5" placeholder="Комментарий к заказу"></textarea>
+										<textarea rows="5" placeholder="Комментарий к заказу">Злой консерьеж, заедает звонок, лучше стучите!</textarea>
 									</fieldset>
 								</div>
-								<div class="col-6">
+								<div class="col-sm-8 col-xxl-6">
 									<fieldset class="mb-5">
 										<legend class="gray-1 fs-15 fw-5 mb-4">Способ оплаты:</legend>
 										<div class="box">
@@ -273,22 +273,28 @@
 												<input type="radio" name="payment" value="Картой курьеру" id="courier-card">
 												<label for="courier-card" class="ms-2">Картой курьеру</label>
 											</div>
+											<div class="d-flex align-items-center mb-3">
+												<input type="radio" name="payment" value="Онлайн картой" id="online-card">
+												<label for="online-card" class="ms-2">
+													<div>Онлайн картой</div>
+													<div class="gray-3">**** **** **** 7685</div>
+												</label>
+											</div>
 											<div class="d-flex align-items-center">
-												<input type="radio" name="payment" value="Онлайн на сайте" id="online">
-												<label for="online" class="ms-2">Онлайн на сайте</label>
+												<input type="radio" name="payment" value="Apple Pay/ Google Pay" id="a-g-pay">
+												<label for="a-g-pay" class="ms-2">Apple Pay/ Google Pay</label>
 											</div>
 										</div>
 									</fieldset>
 									<div class="d-flex align-items-center mb-5">
-										<input type="checkbox" id="pay-with-bonus">
+										<input type="checkbox" id="pay-with-bonus" checked>
 										<label for="pay-with-bonus" class="ms-2">Оплатить заказ бонусными баллами</label>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-3 offset-1">
-							
-							<div class="box">
+						<div class="col-md-5 col-xl-4 col-xxl-3 offset-xl-1 position-relative mb-5 mb-md-0">
+							<div class="box outcome">
 								<div class="gray-1 fw-5 fs-12 mb-3 ps-2">Ваш заказ:</div>
 								<div class="table-resposive">
 									<table class="table table-borderless mb-0">
@@ -336,7 +342,7 @@
 						</div>
 					</div>
 					<div class="row mb-5">
-						<div class="col-3">
+						<div class="col-md-5 col-xl-4 col-xxl-3">
 							<div class="table-resposive">
 								<table class="table table-borderless fw-5 mb-0">
 									<tbody>

@@ -203,8 +203,9 @@
 			<div class="container">
 				<div class="short-info row mb-5">
 					<div class="col-4">
-						<div class="position-relative">
-							<img src="img/products/margarita.png" alt="Пицца «Маргарита»" class="prod">
+						<div class="img-prod">
+							<img src="img/products/margarita.png" alt="Пицца «Маргарита»">
+							<button type="button" class="btn-icon favorite" data-state="off" onclick="toggleState(this);"></button>
 							<button type="button" class="btn-icon compare" data-state="off" onclick="toggleState(this);"></button>
 						</div>
 					</div>
@@ -279,44 +280,54 @@
 					</div>
 				</div>
 				<h4 class="text-start mb-5">Добавить ингредиент</h4>
-				<div class="row g-4 mb-5">
-					<div class="col-2">
-						<div class="ingredient">
-							<img src="img/ingredients/olives.jpg" alt="Оливки">
-							<div class="title">Оливки</div>
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="gray">43 ₽</div>
-								<button type="button" class="btn" data-state="off" onclick="toggleState(this);"></button>
+				<div class="swiper-6 mb-5">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="ingredient">
+								<img src="img/ingredients/olives.jpg" alt="Coca Cola">
+								<div>
+									<div class="title">Оливки</div>
+									<div class="mt-1 d-sm-flex justify-content-between align-items-center">
+										<div class="gray">43 ₽</div>
+										<button type="button" class="btn" data-state="off" onclick="toggleState(this);"></button>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-2">
-						<div class="ingredient">
-							<img src="img/ingredients/pepperoni.jpg" alt="Пеперони">
-							<div class="title">Пеперони</div>
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="gray">43 ₽</div>
-								<button type="button" class="btn" data-state="off" onclick="toggleState(this);"></button>
+						<div class="swiper-slide">
+							<div class="ingredient">
+								<img src="img/ingredients/pepperoni.jpg" alt="pepperoni">
+								<div>
+									<div class="title">Пеперони</div>
+									<div class="mt-1 d-sm-flex justify-content-between align-items-center">
+										<div class="gray">43 ₽</div>
+										<button type="button" class="btn" data-state="off" onclick="toggleState(this);"></button>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-2">
-						<div class="ingredient">
-							<img src="img/ingredients/tomatoes.jpg" alt="Томаты">
-							<div class="title">Томаты</div>
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="gray">43 ₽</div>
-								<button type="button" class="btn" data-state="off" onclick="toggleState(this);"></button>
+						<div class="swiper-slide">
+							<div class="ingredient">
+								<img src="img/ingredients/tomatoes.jpg" alt="Томаты">
+								<div>
+									<div class="title">Томаты</div>
+									<div class="mt-1 d-sm-flex justify-content-between align-items-center">
+										<div class="gray">43 ₽</div>
+										<button type="button" class="btn" data-state="on" onclick="toggleState(this);"></button>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-2">
-						<div class="ingredient">
-							<img src="img/ingredients/cheese.jpg" alt="Сыр">
-							<div class="title">Сыр</div>
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="gray">43 ₽</div>
-								<button type="button" class="btn" data-state="off" onclick="toggleState(this);"></button>
+						<div class="swiper-slide">
+							<div class="ingredient">
+								<img src="img/ingredients/cheese.jpg" alt="Сыр">
+								<div>
+									<div class="title">Сыр</div>
+									<div class="mt-1 d-sm-flex justify-content-between align-items-center">
+										<div class="gray">43 ₽</div>
+										<button type="button" class="btn" data-state="off" onclick="toggleState(this);"></button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -419,7 +430,7 @@
 									</div>
 									<div class="dark fw-5 mt-2">Кристина Смелова</div>
 								</div>
-								<button type="button" class="btn btn-1 mt-5">Написать отзыв</button>
+								<button type="button" data-bs-toggle="modal" data-bs-target="#write-feedback" class="btn btn-1 mt-5">Написать отзыв</button>
 							</div>
 						</div>
 					</div>
@@ -429,7 +440,7 @@
 
 		<section class="mb-8">
 			<div class="container">
-				<h4 class="text-start mb-4">Ещё из этой категории</h4>
+				<h4 class="text-start mb-5">Ещё из этой категории</h4>
 				<div class="position-relative">
 					<div class="swiper-4">
 						<div class="swiper-wrapper">
@@ -1105,6 +1116,38 @@
 							<span>У вас уже есть учётная запись?</span>
 							<button type="button" class="blue ms-1" data-bs-toggle="modal" data-bs-target="#entrance" data-bs-dismiss="modal">Вход</button>
 						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="write-feedback" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal">
+					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18 6L6 18"/>
+						<path d="M6 6L18 18"/>
+					</svg>						
+				</button>
+				<div class="modal-body">
+					<h5 class="text-center">Отправка отзыва</h5>
+					<form>
+						<div class="mb-2">Имя и Фамилия:</div>
+						<input type="text" class="mb-4" placeholder="Иван Иванов">
+						<div class="mb-2">Ваша оценка:</div>
+						<div class="leave-rating mb-4">
+							<input type="radio" name="rating" value="5">
+							<input type="radio" name="rating" value="4">
+							<input type="radio" name="rating" value="3">
+							<input type="radio" name="rating" value="2">
+							<input type="radio" name="rating" value="1">
+						</div>
+
+						<div class="mb-2">Ваш отзыв</div>
+						<textarea class="mb-4" rows="5" placeholder="Начните вводить текст…"></textarea>
+
+						<button type="submit" class="btn btn-1 py-sm-3">Отправить отзыв</button>
 					</form>
 				</div>
 			</div>
