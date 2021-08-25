@@ -103,21 +103,27 @@ const swiper8 = new Swiper(".swiper-6", {
     freeMode: true,
     breakpoints: {
         576: {
-            spaceBetween: 16,
+            slidesPerView: 3,
+            spaceBetween: 8,
         },
         768: {
             slidesPerView: 3,
+            spaceBetween: 16,
         },
         992: {
             slidesPerView: 4,
+            spaceBetween: 16,
         },
         1200: {
             slidesPerView: 5,
+            spaceBetween: 16,
         },
         1400: {
-            spaceBetween: 24,
+            slidesPerView: 6,
+            spaceBetween: 16,
         },
         1660: {
+            spaceBetween: 24,
             slidesPerView: 6,
         }
     }
