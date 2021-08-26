@@ -1430,7 +1430,7 @@
 
 	<button type="button" id="gift-btn" data-bs-toggle="modal" data-bs-target="#gift">
 		<img src="img/icons/gift.png" alt="выберите подарок">
-		<div>0</div>
+		<div>1</div>
 	</button>
 
 	<!-- right menu -->
@@ -1539,7 +1539,26 @@
 				</button>
 				<div class="modal-body">
 					<h5>Вам подарок!</h5>
-					<div>Вы набрали максимальную сумму, заберите один из подарков!</div>
+					<div class="gray-2 mb-5">Вы набрали максимальную сумму, заберите один из подарков!</div>
+					<div class="row row-cols-3 text-center">
+						<div class="gift">
+							<img src="img/products/margarita.png" alt="Пицца «Баварская»">
+							<div class="title">Пицца «Баварская»</div>
+							<!-- <div class="sum">1000 / 1500</div> -->
+							<button type="button" class="btn btn-1 mx-auto" data-state="off" onclick="toggleState(this);"></button>
+						</div>
+						<div class="gift">
+							<img src="img/products/filadelfia.png" alt="Сет «Филадельфия»">
+							<div class="title">Сет «Филадельфия»</div>
+							<!-- <div class="sum">1000 / 2000</div> -->
+							<div class="gray-3">Вы выбрали другой подарок</div>
+						</div>
+						<div class="gift">
+							<img src="img/products/frutti-di-maro.png" alt="Пицца «Баварская»">
+							<div class="title">Пицца «Баварская»</div>
+							<div class="sum">1000 / 2500</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

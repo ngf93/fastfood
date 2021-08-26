@@ -2727,6 +2727,28 @@ footer {
     border-radius: 50%;
   }
 }
+#gift {
+  .gift {
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 1em;
+    }
+    .title {
+      
+      margin-bottom: 1em; 
+    }
+    button {
+      &[data-state="off"]::after{
+        content: "Забрать";
+      }
+      &[data-state="on"]::after {
+        content: "Отменить";
+      }
+    }
+  }
+}
 
 /* breadcrumbs */
 .breadcrumb-item {
