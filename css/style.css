@@ -2970,6 +2970,7 @@ main {
   background-position: 0 -20px;
 }
 
+/* sec 12 */
 #sec-12 .swiper-gallery {
   position: relative;
   overflow: hidden;
@@ -3904,6 +3905,57 @@ footer.mobile .link-2 svg path {
 
 footer.mobile .link-2.active svg path {
   fill: #ff9900;
+}
+
+/* gifts */
+#gift-btn {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  z-index: 100;
+  background: #FFF;
+  -webkit-box-shadow: 0px 0px 8px rgba(179, 179, 179, 0.3);
+          box-shadow: 0px 0px 8px rgba(179, 179, 179, 0.3);
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#gift-btn img {
+  width: 3em;
+}
+
+#gift-btn div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 110;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  width: 1.5em;
+  height: 1.5em;
+  color: #4F4F4F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .9em;
+  border-radius: 50%;
 }
 
 /* breadcrumbs */

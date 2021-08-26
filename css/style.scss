@@ -2081,6 +2081,7 @@ main {
 }
 
 
+/* sec 12 */
 #sec-12 {
   .swiper-gallery {
     position: relative;
@@ -2135,6 +2136,7 @@ main {
     }
   }
 }
+
 
 /* section 13 - personal account */
 #sec-13 {
@@ -2692,6 +2694,37 @@ footer {
         }
       }
     }
+  }
+}
+
+/* gifts */
+#gift-btn {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  z-index: 100;
+  background: #FFF;
+  box-shadow: 0px 0px 8px rgba(179, 179, 179, 0.3);
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  @include flex-center();
+  img {
+    width: 3em;
+  }
+  div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 110;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    width: 1.5em;
+    height: 1.5em;
+    color: $gray-2;
+    @include flex-center();
+    font-size: .9em;
+    border-radius: 50%;
   }
 }
 
