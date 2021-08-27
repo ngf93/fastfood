@@ -250,7 +250,7 @@
 												<div class="primary fw-5 fs-12">3%</div>
 											</div>
 											<div class="d-flex flex-column justify-content-end align-items-end">
-												<div class="barcode">
+												<div class="barcode" data-bs-toggle="modal" data-bs-target="#barcode">
 													A1234567890B
 												</div>
 											</div>
@@ -843,8 +843,26 @@
 					</svg>						
 				</button>
 				<div class="modal-body">
-					<div class="qrcode mx-auto">
+					<div class="qrcode mx-auto mb-4">
 						<img src="img/qr-code.png" alt="">
+					</div>
+					<div class="fs-15 text-center mt-3">Карта № 4556 8900 3765</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="barcode" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal">
+					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18 6L6 18"/>
+						<path d="M6 6L18 18"/>
+					</svg>						
+				</button>
+				<div class="modal-body">
+					<div class="barcode mx-auto mb-4">
+						A1234567890B
 					</div>
 					<div class="fs-15 text-center mt-3">Карта № 4556 8900 3765</div>
 				</div>

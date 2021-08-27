@@ -167,6 +167,17 @@ cartPreview.addEventListener('mouseleave', (event) => {
 });
 
 
+window.onload = function() {
+  let toastElList = [].slice.call(document.querySelectorAll('.toast'))
+  let toastList = toastElList.map(function (toastEl) {
+    return new bootstrap.Toast(toastEl, { 
+      autohide: false 
+    })
+  });
+  toastList.forEach(toast => toast.show());
+}
+
+
 /* sticky search */
 if (window.matchMedia("(max-width: 767px)").matches) {
   let page = document.querySelector('.search-page');

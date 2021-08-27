@@ -1528,6 +1528,13 @@
 	</div>
 
 	<!-- Modal -->
+	<div id="cookie" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+		<p class="gray-1 lh-15 mb-4">Мы используем файлы cookie, чтобы помочь персонализировать контент, адаптировать и оценивать рекламу, а также повысить безопасность. Оставаясь на этом веб-сайте, вы соглашаетесь на использование файлов cookie в соответствии с нашей Политикой использования файлов cookie.</p>
+		<div class="d-flex">
+			<button type="button" class="btn btn-1" data-bs-dismiss="toast" aria-label="Закрыть">Согласен</button>
+			<button type="button" class="btn gray-3 ms-sm-4">Покинуть сайт</button>
+		</div>
+	</div>
 	<div class="modal fade" id="gift" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
 			<div class="modal-content">
@@ -1540,23 +1547,23 @@
 				<div class="modal-body">
 					<h5>Вам подарок!</h5>
 					<div class="gray-2 mb-5">Вы набрали максимальную сумму, заберите один из подарков!</div>
-					<div class="row row-cols-3 text-center">
+					<div class="row row-cols-sm-2 row-cols-md-3 text-center justify-content-center g-4">
 						<div class="gift">
 							<img src="img/products/margarita.png" alt="Пицца «Баварская»">
 							<div class="title">Пицца «Баварская»</div>
-							<!-- <div class="sum">1000 / 1500</div> -->
+							<!-- <div class="gray-2 fw-5">1000 / 1500</div> -->
 							<button type="button" class="btn btn-1 mx-auto" data-state="off" onclick="toggleState(this);"></button>
 						</div>
 						<div class="gift">
 							<img src="img/products/filadelfia.png" alt="Сет «Филадельфия»">
 							<div class="title">Сет «Филадельфия»</div>
-							<!-- <div class="sum">1000 / 2000</div> -->
+							<!-- <div class="gray-2 fw-5">1000 / 2000</div> -->
 							<div class="gray-3">Вы выбрали другой подарок</div>
 						</div>
 						<div class="gift">
 							<img src="img/products/frutti-di-maro.png" alt="Пицца «Баварская»">
 							<div class="title">Пицца «Баварская»</div>
-							<div class="sum">1000 / 2500</div>
+							<div class="gray-2 fw-5">1000 / 2500</div>
 						</div>
 					</div>
 				</div>
