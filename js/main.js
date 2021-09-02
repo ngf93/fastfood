@@ -1,9 +1,8 @@
 /* sticky header */
 if (window.matchMedia("(min-width: 768px)").matches) {
   window.addEventListener('scroll', function() {
-    let h_header = document.querySelector('header').offsetHeight;
     let st = window.pageYOffset;
-    if (st > h_header) {
+    if (st > 65) {
       document.querySelector('header').classList.add("h-sticky");
     } else {
       document.querySelector('header').classList.remove("h-sticky");
@@ -36,40 +35,6 @@ function change_state(btn) {
     btn.dataset.state = 'invisible';
   }
 }
-
-/* switch buttons */
-window.onload = function() {
-  let switchDivs = Array.from(document.querySelectorAll('.switch'));
-  switchDivs.forEach(function(item, i, arr) {
-    let ind = item.querySelector('.indicator');
-    let arr_options = Array.from(item.querySelectorAll('.switch-option'));
-    let cur_opt_index;
-    for(let i = 0; i < arr_options.length; i++){
-      if(arr_options[i].classList.contains('active')){
-        cur_opt_index = i;
-        ind.style.width = 100/arr_options.length + '%';
-        ind.style.transform = moveInd(cur_opt_index);
-      }
-    }
-  });
-}
-function switchTo(btn){
-  let parent = btn.parentElement;
-  let ind = parent.querySelector('.indicator');
-  let arr_options = Array.from(parent.querySelectorAll('.switch-option'));
-  for(let i = 0; i < arr_options.length; i++){
-    arr_options[i].classList.remove('active');
-    if(btn == arr_options[i]){
-      btn.classList.add('active');
-      ind.style.transform = moveInd(i);
-    }
-  }
-}
-function moveInd(index){
-  let shift = 'translateX('+index*100 +'%)';
-  return shift;
-}
-
 
 /* inputs verification if required & verifiable-btn activation/block */
 function verifyInput(form){
@@ -104,17 +69,57 @@ function verifyInput(form){
   }
 }
 
+function switchTo(btn){
+  let parent = btn.parentElement;
+  let ind = parent.querySelector('.indicator');
+  let arr_options = Array.from(parent.querySelectorAll('.switch-option'));
+  for(let i = 0; i < arr_options.length; i++){
+    arr_options[i].classList.remove('active');
+    if(btn == arr_options[i]){
+      btn.classList.add('active');
+      ind.style.transform = moveInd(i);
+    }
+  }
+}
+function moveInd(index){
+  let shift = 'translateX('+index*100 +'%)';
+  return shift;
+}
+window.onload = function() {
+  /* toasts */
+  let toastElList = [].slice.call(document.querySelectorAll('.toast'))
+  let toastList = toastElList.map(function (toastEl) {
+    return new bootstrap.Toast(toastEl, { 
+      autohide: false 
+    })
+  });
+  toastList.forEach(toast => toast.show());
 
-/************  
-SEARCH / FILTER 
-*************/
-let arr_search = Array.from(document.querySelectorAll('.search-in-list'));
-arr_search.forEach(function(item, i, arr) {
-    item.addEventListener('input', (event) => {
-        listSearch(item);
-    });
-});
-function listSearch(elem) {
+  /* switch buttons */
+  let switchDivs = Array.from(document.querySelectorAll('.switch'));
+  switchDivs.forEach(function(item, i, arr) {
+    let ind = item.querySelector('.indicator');
+    let arr_options = Array.from(item.querySelectorAll('.switch-option'));
+    let cur_opt_index;
+    for(let i = 0; i < arr_options.length; i++){
+      if(arr_options[i].classList.contains('active')){
+        cur_opt_index = i;
+        ind.style.width = 100/arr_options.length + '%';
+        ind.style.transform = moveInd(cur_opt_index);
+      }
+    }
+  });
+
+  /************  
+  SEARCH / FILTER 
+  *************/
+  let arr_search = Array.from(document.querySelectorAll('.search-in-list'));
+  arr_search.forEach(function(item, i, arr) {
+      item.addEventListener('input', (event) => {
+          listSearch(item);
+      });
+  });
+  function listSearch(elem) {
     let phrase = elem.value.trim();
     let arr = elem.nextElementSibling.querySelectorAll('.search-item');
     let regPhrase = new RegExp(phrase, 'i');
@@ -136,58 +141,33 @@ function listSearch(elem) {
             }
         }
     }
-}
-
-/* input file */
-let arr_inputFile = Array.from(document.querySelectorAll('.upload-file input'));
-arr_inputFile.forEach(function(item, i, arr) {
-    item.addEventListener('input', (event) => {
-      processSelectedFiles(item);
-    });
-});
-function processSelectedFiles(fileInput) {
-  let output = fileInput.previousElementSibling;
-  let files = fileInput.files;
-  if (files.length==1){
-    output.innerHTML = files[0].name;
-  } else if (files.length==0) {
-    output.innerHTML = 'Прикрепить файл';
-  } else {
-    output.innerHTML = 'Выбрано файлов: '+files.length;
   }
-}
 
-
-let cartPreview = document.getElementById('toggle-cart');
-cartPreview.addEventListener('mouseenter', (event) => {
-  cartPreview.querySelector('.cart-preview').style.display = 'block';
-});
-cartPreview.addEventListener('mouseleave', (event) => {
-  cartPreview.querySelector('.cart-preview').style.display = 'none';
-});
-
-
-window.onload = function() {
-  let toastElList = [].slice.call(document.querySelectorAll('.toast'))
-  let toastList = toastElList.map(function (toastEl) {
-    return new bootstrap.Toast(toastEl, { 
-      autohide: false 
-    })
+  /* input file */
+  let arr_inputFile = Array.from(document.querySelectorAll('.upload-file input'));
+  arr_inputFile.forEach(function(item, i, arr) {
+      item.addEventListener('input', (event) => {
+        processSelectedFiles(item);
+      });
   });
-  toastList.forEach(toast => toast.show());
-}
-
-
-/* sticky search */
-if (window.matchMedia("(max-width: 767px)").matches) {
-  let page = document.querySelector('.search-page');
-  page.addEventListener('scroll', function() {
-    let height = document.getElementById('fixing-anchor').offsetTop;
-    let st = page.scrollTop;
-    if (st > height) {
-      document.getElementById('search-head').classList.add("sticky");
+  function processSelectedFiles(fileInput) {
+    let output = fileInput.previousElementSibling;
+    let files = fileInput.files;
+    if (files.length==1){
+      output.innerHTML = files[0].name;
+    } else if (files.length==0) {
+      output.innerHTML = 'Прикрепить файл';
     } else {
-      document.getElementById('search-head').classList.remove("sticky");
+      output.innerHTML = 'Выбрано файлов: '+files.length;
     }
+  }
+
+
+  let cartPreview = document.getElementById('toggle-cart');
+  cartPreview.addEventListener('mouseenter', (event) => {
+    cartPreview.querySelector('.cart-preview').style.display = 'block';
+  });
+  cartPreview.addEventListener('mouseleave', (event) => {
+    cartPreview.querySelector('.cart-preview').style.display = 'none';
   });
 }
